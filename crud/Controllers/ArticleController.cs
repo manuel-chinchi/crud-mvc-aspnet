@@ -9,7 +9,15 @@ namespace crud.Controllers
 {
     public class ArticleController : Controller
     {
-        static Article article = new Article() { Id = 1, Name = "zapatilla", Description = "nike, talle 42" };
+        static List<Article> articles;
+
+        public ArticleController()
+        {
+            articles = new List<Article>();
+            articles.Add(new Article() { Id = 1, Name = "zapatilla", Description = "nike, talle 43", Quantity = 100 });
+            articles.Add(new Article() { Id = 2, Name = "remera", Description = "talle M", Quantity = 50 });
+            articles.Add(new Article() { Id = 3, Name = "sombrero", Description = "chino", Quantity = 100 });
+        }
 
         // GET: Article/Details/5
         public ActionResult Details(int id)
@@ -18,6 +26,7 @@ namespace crud.Controllers
         }
 
         // GET: Article/Create
+        [HttpGet]
         public ActionResult Create()
         {
             ViewBag.Message = "Ingrese los datos del artículo";
@@ -30,9 +39,8 @@ namespace crud.Controllers
         {
             try
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
+                return RedirectToAction("List");
             }
             catch
             {
@@ -41,10 +49,11 @@ namespace crud.Controllers
         }
 
         // GET: Article/Edit/5
+        [HttpGet]
         public ActionResult Edit(int id = 1)
         {
             ViewBag.Description = "Datos del artículo";
-            return View(article);
+            return View(articles[0]);
         }
 
         // POST: Article/Edit/5
@@ -53,9 +62,18 @@ namespace crud.Controllers
         {
             try
             {
-                // TODO: Add update logic here
+                int indexItem = articles.FindIndex(x => x.Id == Convert.ToInt32(collection["Id"]));
 
-                return RedirectToAction("Index");
+                Article articleEdit = articles.Where(x => x.Id == id).FirstOrDefault();
+                articleEdit.Name = collection["Name"];
+                articleEdit.Description = collection["Description"];
+                articleEdit.Quantity = Convert.ToInt32(collection["Quantity"]);
+
+                articles.RemoveAt(indexItem);
+                articles.Insert(indexItem, articleEdit);
+
+                //return View("List");
+                return RedirectToAction("List");
             }
             catch
             {
@@ -66,23 +84,14 @@ namespace crud.Controllers
         // GET: Article/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            //return View();
+            return RedirectToAction("List");
         }
 
-        // POST: Article/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult List()
         {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            ViewBag.Message = "Lista de artículos existentes";
+            return View(articles);
         }
     }
 }
