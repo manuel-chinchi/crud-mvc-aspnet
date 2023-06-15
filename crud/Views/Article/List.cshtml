@@ -1,14 +1,18 @@
 ﻿@model IEnumerable<crud.Models.Article>
 
 @{
-    ViewBag.Title = "ListDetails";
+    ViewBag.Title = "Crear artículo";
 }
 
 <h2>ListDetails</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<div>
+    @using (Html.BeginForm("Create", "Article", FormMethod.Get))
+    {
+        <button type="submit" class="btn btn-success btn-sm px-3">Agregar</button>
+    }
+</div>
+<br />
 <table class="table">
     <tr>
         <th>

@@ -25,27 +25,26 @@ namespace crud.Controllers
             return View();
         }
 
-        // GET: Article/Create
         [HttpGet]
         public ActionResult Create()
         {
             ViewBag.Message = "Ingrese los datos del artículo";
+
             return View();
         }
 
-        // POST: Article/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Article article)
         {
-            try
+            if (true)
             {
-                //return RedirectToAction("Index");
+                TempData["AlertMessage"] = "Se ha agregado el artículo";
+                TempData["AlertStyle"] = AlertConstants.SUCCESS;
+
                 return RedirectToAction("List");
             }
-            catch
-            {
-                return View();
-            }
+
+            return View();
         }
 
         // GET: Article/Edit/5
