@@ -1,12 +1,11 @@
 ﻿@model crud.Models.Article
 
-<div class="btn-group">
+<div class="btn-toolbar">
     <form method="get" action="/Article/Edit/@Model.Id">
-        @*@Html.ActionLink("Editar", "Edit", "Article", new { id = Model.Id }, new { @class = "btn btn-success btn-sm", data_toggle = "modal" })*@
-        <button type="submit" class="btn btn-primary btn-sm" data-toggle="modal">Editar</button>
+        <button type="submit" class="btn btn-primary btn-sm px-3 mr-sm-1" data-toggle="modal">Editar</button>
     </form>
     <!-- Button trigger modal 'Details' -->
-    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal_details_@{@Model.Id}">Detalles</button>
+    <button type="button" class="btn btn-success btn-sm mr-sm-1" data-toggle="modal" data-target="#modal_details_@{@Model.Id}">Detalles</button>
     <!-- Button trigger modal 'Delete' -->
     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal_delete_@{@Model.Id}">Eliminar</button>
 </div>

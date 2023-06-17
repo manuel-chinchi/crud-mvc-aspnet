@@ -19,14 +19,6 @@ namespace crud.Controllers
             articles.Add(new Article() { Id = 3, Name = "sombrero", Description = "chino", Quantity = 100 });
         }
 
-        // GET: Article/Details/5
-        //public ActionResult Details(int id)
-        //{
-        //    Article article = articles.Where(x => x.Id == id).FirstOrDefault();
-
-        //    return PartialView("_Details", article);
-        //}
-
         [HttpGet]
         public ActionResult Create()
         {
@@ -74,10 +66,8 @@ namespace crud.Controllers
             return View();
         }
 
-        // GET: Article/Delete/5
         public ActionResult Delete(int id)
         {
-            //return View();
             return RedirectToAction("List");
         }
 
