@@ -11,7 +11,10 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form>
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
                     <div class="form-group">
                         @Html.Label("Nombre")
                         @Html.TextBoxFor(model => model.Name, new { @class = "form-control form-control-sm", @readonly = true })
@@ -24,10 +27,10 @@
                         @Html.Label("Cantidad")
                         @Html.TextBoxFor(model => model.Quantity, new { @class = "form-control form-control-sm", @readonly = true })
                     </div>
-                </form>
+                }
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cerrar</button>
             </div>
         </div>
     </div>
