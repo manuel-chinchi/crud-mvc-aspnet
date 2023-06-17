@@ -210,6 +210,7 @@
     <Content Include="Views\Article\_Delete.cshtml" />
     <Content Include="Views\Article\List.cshtml" />
     <Content Include="Views\Article\_ActionButtons.cshtml" />
+    <Content Include="Views\Article\_Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

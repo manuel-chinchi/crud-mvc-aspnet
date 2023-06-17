@@ -1,9 +1,12 @@
 ﻿@model crud.Models.Article
 
-<form method="get" action="/Article/Edit/@Model.Id">
-    @*@Html.ActionLink("Editar", "Edit", "Article", new { id = Model.Id }, new { @class = "btn btn-success btn-sm", data_toggle = "modal" })*@
-    <button type="submit" class="btn btn-success btn-sm" data-toggle="modal">Editar</button>
-    @Html.ActionLink("Details", "Details", new { id = Model.Id }) |
-    @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
-</form>
+<div class="btn-group">
+    <form method="get" action="/Article/Edit/@Model.Id">
+        @*@Html.ActionLink("Editar", "Edit", "Article", new { id = Model.Id }, new { @class = "btn btn-success btn-sm", data_toggle = "modal" })*@
+        <button type="submit" class="btn btn-primary btn-sm" data-toggle="modal">Editar</button>
+    </form>
+    <!-- Button trigger modal 'Details' -->
+    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal_details_@{@Model.Id}">Detalles</button>
+</div>
 
+@Html.Partial("_Details", Model)

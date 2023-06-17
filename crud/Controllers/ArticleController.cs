@@ -20,10 +20,12 @@ namespace crud.Controllers
         }
 
         // GET: Article/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
+        //public ActionResult Details(int id)
+        //{
+        //    Article article = articles.Where(x => x.Id == id).FirstOrDefault();
+
+        //    return PartialView("_Details", article);
+        //}
 
         [HttpGet]
         public ActionResult Create()
