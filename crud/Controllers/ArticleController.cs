@@ -7,18 +7,8 @@ using System.Web.Mvc;
 
 namespace crud.Controllers
 {
-    public class ArticleController : Controller
+    public class ArticleController : BaseController
     {
-        static List<Article> articles;
-
-        public ArticleController()
-        {
-            articles = new List<Article>();
-            articles.Add(new Article() { Id = 1, Name = "zapatilla", Description = "nike, talle 43", Quantity = 100 });
-            articles.Add(new Article() { Id = 2, Name = "remera", Description = "talle M", Quantity = 50 });
-            articles.Add(new Article() { Id = 3, Name = "sombrero", Description = "chino", Quantity = 100 });
-        }
-
         [HttpGet]
         public ActionResult Create()
         {
@@ -47,7 +37,7 @@ namespace crud.Controllers
             ViewBag.Message = "Datos del artículo";
             ViewBag.Categories = null;
 
-            Article article = articles.Where(x => x.Id == id).FirstOrDefault();
+            Article article = articleService.GetArticles().Where(x => x.Id == id).FirstOrDefault();
 
             return View(article);
         }
@@ -74,7 +64,7 @@ namespace crud.Controllers
         public ActionResult List()
         {
             ViewBag.Message = "Lista de artículos existentes";
-            return View(articles);
+            return View(articleService.GetArticles());
         }
     }
 }
