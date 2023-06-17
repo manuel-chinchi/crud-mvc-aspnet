@@ -47,37 +47,29 @@ namespace crud.Controllers
             return View();
         }
 
-        // GET: Article/Edit/5
         [HttpGet]
-        public ActionResult Edit(int id = 1)
+        public ActionResult Edit(int id)
         {
-            ViewBag.Description = "Datos del artículo";
-            return View(articles[0]);
+            ViewBag.Message = "Datos del artículo";
+            ViewBag.Categories = null;
+
+            Article article = articles.Where(x => x.Id == id).FirstOrDefault();
+
+            return View(article);
         }
 
-        // POST: Article/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(Article article)
         {
-            try
+            if (true)
             {
-                int indexItem = articles.FindIndex(x => x.Id == Convert.ToInt32(collection["Id"]));
+                TempData["AlertMessage"] = "Se ha actualizado el artículo";
+                TempData["AlertStyle"] = AlertConstants.SUCCESS;
 
-                Article articleEdit = articles.Where(x => x.Id == id).FirstOrDefault();
-                articleEdit.Name = collection["Name"];
-                articleEdit.Description = collection["Description"];
-                articleEdit.Quantity = Convert.ToInt32(collection["Quantity"]);
-
-                articles.RemoveAt(indexItem);
-                articles.Insert(indexItem, articleEdit);
-
-                //return View("List");
                 return RedirectToAction("List");
             }
-            catch
-            {
-                return View();
-            }
+
+            return View();
         }
 
         // GET: Article/Delete/5
