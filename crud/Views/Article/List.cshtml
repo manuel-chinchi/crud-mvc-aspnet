@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<crud.Models.Article>
 
 @{
-    ViewBag.Title = "Crear artículo";
+    ViewBag.Title = "Lista de artículos";
 }
 
-<h2>ListDetails</h2>
-
+<h2>@ViewBag.Title</h2>
+<p>@ViewBag.Message</p>
 <div>
     @using (Html.BeginForm("Create", "Article", FormMethod.Get))
     {
