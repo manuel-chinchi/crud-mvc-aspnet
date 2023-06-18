@@ -22,6 +22,8 @@ namespace crud.Controllers
         {
             if (true)
             {
+                articleService.CreateArticle(article);
+
                 TempData["AlertMessage"] = "Se ha agregado el artículo";
                 TempData["AlertStyle"] = AlertConstants.SUCCESS;
 
@@ -37,9 +39,7 @@ namespace crud.Controllers
             ViewBag.Message = "Datos del artículo";
             ViewBag.Categories = null;
 
-            Article article = articleService.GetArticles().Where(x => x.Id == id).FirstOrDefault();
-
-            return View(article);
+            return View(articleService.GetArticle(id));
         }
 
         [HttpPost]
@@ -47,6 +47,8 @@ namespace crud.Controllers
         {
             if (true)
             {
+                articleService.UpdateArticle(article);
+
                 TempData["AlertMessage"] = "Se ha actualizado el artículo";
                 TempData["AlertStyle"] = AlertConstants.SUCCESS;
 
@@ -58,6 +60,11 @@ namespace crud.Controllers
 
         public ActionResult Delete(int id)
         {
+            TempData["AlertMessage"] = "Se ha eliminado el artículo '" + articleService.GetArticle(id).Name + "'";
+            TempData["AlertStyle"] = AlertConstants.SUCCESS;
+
+            articleService.DeleteArticle(id);
+
             return RedirectToAction("List");
         }
 
