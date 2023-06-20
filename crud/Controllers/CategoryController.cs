@@ -20,7 +20,7 @@ namespace crud.Controllers
         [HttpPost]
         public ActionResult Create(Category category)
         {
-            if (true)
+            if (ModelState.IsValid)
             {
                 categoryService.CreateCategory(category);
                 
