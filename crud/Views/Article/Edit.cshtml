@@ -26,7 +26,7 @@
 
             <div class="form-group">
                 @Html.LabelFor(model => model.Category, new { @class = "control-label" })
-                <select class="form-control form-control-sm">
+                <select class="form-control form-control-sm" name="CategoryId">
                     @foreach (Category item in ViewBag.Categories)
                     {
                         if (item.Name == Model.Category.Name)

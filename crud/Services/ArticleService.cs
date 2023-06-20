@@ -18,6 +18,7 @@ namespace crud.Services
                 {
                     Name = article.Name,
                     Description = article.Description,
+                    CategoryId = article.CategoryId,
                     Quantity = article.Quantity,
                     DateCreated = article.DateCreated
                 });
@@ -60,6 +61,7 @@ namespace crud.Services
 
                 result.Name = article.Name;
                 result.Description = article.Description;
+                result.CategoryId = article.CategoryId;
                 result.Quantity = article.Quantity;
                 result.DateUpdated = DateTime.Now;
 

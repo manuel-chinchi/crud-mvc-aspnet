@@ -21,6 +21,8 @@ namespace crud.Controllers
         [HttpPost]
         public ActionResult Create(Article article)
         {
+            article.Category = categoryService.GetCategory(article.CategoryId);
+
             if (ModelState.IsValid)
             {
                 articleService.CreateArticle(article);

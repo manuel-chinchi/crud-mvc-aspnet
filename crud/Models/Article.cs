@@ -31,6 +31,6 @@ namespace crud.Models
         [DisplayName("Categoría")]
         public virtual Category Category { get; set; }
 
-        public Article() { DateCreated = DateTime.UtcNow; DateUpdated = null; }
+        public Article() { DateCreated = DateTime.Now; DateUpdated = null; }
     }
 }

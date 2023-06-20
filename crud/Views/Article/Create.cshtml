@@ -23,7 +23,7 @@
 
             <div class="form-group">
                 @Html.LabelFor(model => model.Category)
-                <select class="form-control form-control-sm">
+                <select class="form-control form-control-sm" name="CategoryId">
                     @foreach (Category item in ViewBag.Categories)
                     {
                         <option value="@item.Id">@item.Name</option>
