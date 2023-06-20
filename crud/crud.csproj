@@ -140,6 +140,10 @@
     <Compile Include="Migrations\202306201607500_initial_migration.designer.cs">
       <DependentUpon>202306201607500_initial_migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202306201821007_add_categories_migration.cs" />
+    <Compile Include="Migrations\202306201821007_add_categories_migration.designer.cs">
+      <DependentUpon>202306201821007_add_categories_migration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AlertConstants.cs" />
     <Compile Include="Models\ApplicationContext.cs" />
@@ -250,6 +254,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202306201607500_initial_migration.resx">
       <DependentUpon>202306201607500_initial_migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202306201821007_add_categories_migration.resx">
+      <DependentUpon>202306201821007_add_categories_migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
