@@ -20,7 +20,7 @@ namespace crud.Controllers
         [HttpPost]
         public ActionResult Create(Article article)
         {
-            if (true)
+            if (ModelState.IsValid)
             {
                 articleService.CreateArticle(article);
 
@@ -45,7 +45,7 @@ namespace crud.Controllers
         [HttpPost]
         public ActionResult Edit(Article article)
         {
-            if (true)
+            if (ModelState.IsValid)
             {
                 articleService.UpdateArticle(article);
 
