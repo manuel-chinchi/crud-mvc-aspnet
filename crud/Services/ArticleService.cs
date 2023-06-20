@@ -3,6 +3,7 @@ using crud.Services.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 using System.Web;
 
 namespace crud.Services
@@ -39,7 +40,7 @@ namespace crud.Services
         {
             using (var db = new ApplicationContext())
             {
-                return db.Articles.Where(a => a.Id == id).FirstOrDefault();
+                return db.Articles.Include(a => a.Category).Where(a => a.Id == id).FirstOrDefault();
             }
         }
 
@@ -47,7 +48,7 @@ namespace crud.Services
         {
             using (var db = new ApplicationContext())
             {
-                return db.Articles.ToList();
+                return db.Articles.Include(a => a.Category).ToList();
             }
         }
 

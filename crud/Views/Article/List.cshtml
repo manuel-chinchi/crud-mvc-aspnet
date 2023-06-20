@@ -1,4 +1,6 @@
-﻿@model IEnumerable<crud.Models.Article>
+﻿@using crud.Models;
+
+@model IEnumerable<crud.Models.Article>
 
 @{
     ViewBag.Title = "Lista de artículos";
@@ -28,12 +30,12 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model)
+            @foreach (Article item in Model)
             {
                 <tr>
                     <th scope="row">@Html.DisplayFor(model => item.Id)</th>
                     <td>@Html.DisplayFor(model => item.Name)</td>
-                    <td>SIN_CATEGORIA</td>
+                    <td>@Html.DisplayFor(model => item.Category.Name)</td>
                     <td>@Html.DisplayFor(model => item.Description)</td>
                     <td>@Html.DisplayFor(model => item.Quantity)</td>
                     <td class="py-1">

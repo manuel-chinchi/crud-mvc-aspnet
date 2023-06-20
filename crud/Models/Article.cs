@@ -28,6 +28,7 @@ namespace crud.Models
         public int CategoryId { get; set; }
 
         // Navigation properties
+        [DisplayName("Categoría")]
         public virtual Category Category { get; set; }
 
         public Article() { DateCreated = DateTime.UtcNow; DateUpdated = null; }

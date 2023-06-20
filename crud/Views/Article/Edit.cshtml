@@ -1,4 +1,6 @@
-﻿@model crud.Models.Article
+﻿@using crud.Models;
+
+@model crud.Models.Article
 
 @{
     ViewBag.Title = "Editar artículo";
@@ -20,6 +22,24 @@
                 @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "" })
                 @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control form-control-sm" } })
                 @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Category, new { @class = "control-label" })
+                <select class="form-control form-control-sm">
+                    @foreach (Category item in ViewBag.Categories)
+                    {
+                        if (item.Name == Model.Category.Name)
+                        {
+                            <option value="@item.Id" selected>@item.Name</option>
+                        }
+                        else
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+                    }
+                </select>
+                @Html.ValidationMessageFor(model => model.Category, "", new { @class = "text-danger" })
             </div>
 
             <div class="form-group">

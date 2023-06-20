@@ -13,6 +13,7 @@ namespace crud.Controllers
         public ActionResult Create()
         {
             ViewBag.Message = "Ingrese los datos del artículo";
+            ViewBag.Categories = categoryService.GetCategories();
 
             return View();
         }
@@ -37,7 +38,7 @@ namespace crud.Controllers
         public ActionResult Edit(int id)
         {
             ViewBag.Message = "Datos del artículo";
-            ViewBag.Categories = null;
+            ViewBag.Categories = categoryService.GetCategories();
 
             return View(articleService.GetArticle(id));
         }
@@ -45,6 +46,8 @@ namespace crud.Controllers
         [HttpPost]
         public ActionResult Edit(Article article)
         {
+            article.Category = categoryService.GetCategory(article.CategoryId);
+
             if (ModelState.IsValid)
             {
                 articleService.UpdateArticle(article);
