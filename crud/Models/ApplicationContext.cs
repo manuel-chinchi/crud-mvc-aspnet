@@ -18,7 +18,7 @@ namespace crud.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             #region Configure_Articles
-            modelBuilder.Entity<Article>().ToTable("articles");
+            modelBuilder.Entity<Article>().ToTable("Articles");
             modelBuilder.Entity<Article>().HasKey(a => a.Id);
             modelBuilder.Entity<Article>().Property(a => a.Name).HasMaxLength(50).IsRequired();
             modelBuilder.Entity<Article>().Property(a => a.Description).HasMaxLength(50);
