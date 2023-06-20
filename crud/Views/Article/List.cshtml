@@ -6,7 +6,7 @@
 
 @Styles.Render("~/Content/datatables")
 
-<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Title</h3>
 <p>@ViewBag.Message</p>
 <div>
     @using (Html.BeginForm("Create", "Article", FormMethod.Get))
@@ -20,10 +20,11 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">@Html.DisplayNameFor(model => model.Name)</th>
-                <th scope="col">@Html.DisplayNameFor(model => model.Description)</th>
-                <th scope="col">@Html.DisplayNameFor(model => model.Quantity)</th>
-                <th scope="col"></th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Categoría</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Acción</th>
             </tr>
         </thead>
         <tbody>
@@ -32,9 +33,10 @@
                 <tr>
                     <th scope="row">@Html.DisplayFor(model => item.Id)</th>
                     <td>@Html.DisplayFor(model => item.Name)</td>
+                    <td>SIN_CATEGORIA</td>
                     <td>@Html.DisplayFor(model => item.Description)</td>
                     <td>@Html.DisplayFor(model => item.Quantity)</td>
-                    <td>
+                    <td class="py-1">
                         @Html.Partial("_ActionButtons", item)
                     </td>
                 </tr>
