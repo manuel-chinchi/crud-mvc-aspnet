@@ -5,7 +5,7 @@ using System.Web;
 
 namespace crud.Models
 {
-    public class CategoryModel
+    public class Category
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -13,6 +13,6 @@ namespace crud.Models
 
         public virtual ICollection<Article> Articles { get; set; }
 
-        public CategoryModel() { DateCreated = DateTime.Now; }
+        public Category() { DateCreated = DateTime.Now; }
     }
 }
