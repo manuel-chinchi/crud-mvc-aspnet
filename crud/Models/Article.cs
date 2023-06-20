@@ -24,6 +24,11 @@ namespace crud.Models
         public DateTime DateCreated { get; set; }
         public DateTime? DateUpdated { get; set; }
 
+        // Foreign Key
+        public int CategoryId { get; set; }
+
+        public virtual Category Category { get; set; }
+
         public Article() { DateCreated = DateTime.UtcNow; DateUpdated = null; }
     }
 }
