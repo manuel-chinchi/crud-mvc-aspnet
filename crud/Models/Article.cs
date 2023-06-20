@@ -27,6 +27,7 @@ namespace crud.Models
         // Foreign Key
         public int CategoryId { get; set; }
 
+        // Navigation properties
         public virtual Category Category { get; set; }
 
         public Article() { DateCreated = DateTime.UtcNow; DateUpdated = null; }

@@ -11,6 +11,7 @@ namespace crud.Models
         public string Name { get; set; }
         public DateTime DateCreated { get; set; }
 
+        // Navigation properties
         public virtual ICollection<Article> Articles { get; set; }
 
         public Category() { DateCreated = DateTime.Now; }
