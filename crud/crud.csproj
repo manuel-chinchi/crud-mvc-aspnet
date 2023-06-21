@@ -240,6 +240,7 @@
     <Content Include="Views\Article\List.cshtml" />
     <Content Include="Views\Article\_ActionButtons.cshtml" />
     <Content Include="Views\Article\_Details.cshtml" />
+    <Content Include="Views\Shared\_AlertNotify.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
