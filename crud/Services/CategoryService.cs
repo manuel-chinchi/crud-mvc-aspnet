@@ -27,7 +27,7 @@ namespace crud.Services
         {
             using (var db = new ApplicationContext())
             {
-                Category category = this.GetCategory(id);
+                Category category = db.Categories.Where(c => c.Id == id).FirstOrDefault();
                 db.Categories.Remove(category);
                 db.SaveChanges();
             }
@@ -37,7 +37,7 @@ namespace crud.Services
         {
             using (var db = new ApplicationContext())
             {
-                return db.Categories.ToList();
+                return db.Categories.Include("Articles").ToList();
             }
         }
 

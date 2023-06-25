@@ -12,7 +12,7 @@ namespace crud.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            ViewBag.Message = "Ingrese los datos del artículo.";
+            ViewBag.Message = "Ingrese los datos de la categoría.";
 
             return View();
         }

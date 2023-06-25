@@ -1,0 +1,58 @@
+﻿@using crud.Models
+
+@model IEnumerable<crud.Models.Category>
+
+@{
+    ViewBag.Title = "Lista de categorías";
+}
+
+@Html.Partial("_AlertNotify")
+
+@Styles.Render("~/Content/datatables")
+
+<h3>@ViewBag.Title</h3>
+<p>@ViewBag.Message</p>
+<div>
+    @using (Html.BeginForm("Create", "Category", FormMethod.Get))
+    {
+        <button type="submit" class="btn btn-success btn-sm px-3">Agregar</button>
+    }
+</div>
+<br />
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Artículos relacionados</th>
+                <th scope="col">Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Category category in Model)
+            {
+                <tr>
+                    <th scope="row">@Html.DisplayFor(model => category.Id)</th>
+                    <td>@Html.DisplayFor(model => category.Name)</td>
+                    <td>@Html.DisplayFor(model => category.Articles.Count)</td>
+                    <td class="py-1">
+                        @if (category.Articles.Count == 0)
+                        {
+                            @Html.Partial("_ActionButtons", category)
+                        }
+                        else
+                        {
+                            <p class="m-0">No disponible</p>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <p>Total: @Model.Count()</p>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/datatables")
+}

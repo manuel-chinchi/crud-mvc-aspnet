@@ -26,6 +26,14 @@
                                 @Html.ActionLink("Ver lista", "List", "Article", null, htmlAttributes: new { @class = "dropdown-item" })
                             </div>
                         </li>
+                        <li class="nav-item dropdown">
+                            @Html.ActionLink("Categorías", "Create", "Category", null, new { @class = "nav-link dropdown-toggle text-white", data_toggle = "dropdown" })
+                            <div class="dropdown-menu">
+                                @Html.ActionLink("Agregar", "Create", "Category", null, new { @class = "dropdown-item" })
+                                <div role="separator" class="dropdown-divider"></div>
+                                @Html.ActionLink("Ver lista", "List", "Category", null, new { @class = "dropdown-item" })
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>

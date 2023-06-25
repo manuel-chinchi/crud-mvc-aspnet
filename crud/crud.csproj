@@ -241,11 +241,14 @@
     <Content Include="Views\Article\_ActionButtons.cshtml" />
     <Content Include="Views\Article\_Details.cshtml" />
     <Content Include="Views\Shared\_AlertNotify.cshtml" />
+    <Content Include="Views\Category\Create.cshtml" />
+    <Content Include="Views\Category\List.cshtml" />
+    <Content Include="Views\Category\_ActionButtons.cshtml" />
+    <Content Include="Views\Category\_Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Base\" />
-    <Folder Include="Views\Category\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
