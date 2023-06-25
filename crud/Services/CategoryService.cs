@@ -33,19 +33,19 @@ namespace crud.Services
             }
         }
 
-        public List<Category> GetCategories()
-        {
-            using (var db = new ApplicationContext())
-            {
-                return db.Categories.Include("Articles").ToList();
-            }
-        }
-
         public Category GetCategory(int id)
         {
             using (var db = new ApplicationContext())
             {
                 return db.Categories.Where(c => c.Id == id).FirstOrDefault();
+            }
+        }
+
+        public List<Category> GetCategories()
+        {
+            using (var db = new ApplicationContext())
+            {
+                return db.Categories.Include("Articles").ToList();
             }
         }
     }

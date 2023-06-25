@@ -28,7 +28,6 @@ namespace crud.Services
 
         public void DeleteArticle(int id)
         {
-
             using (var db = new ApplicationContext())
             {
                 Article article = db.Articles.Where(a => a.Id == id).FirstOrDefault();
