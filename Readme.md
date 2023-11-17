@@ -46,3 +46,4 @@ Página de detalles de un artículo.
 ## Demostración
 
 https://user-images.githubusercontent.com/88981972/233879807-b1d2f422-6fdb-4d00-b366-6c6c44391dc6.mp4
+ 
