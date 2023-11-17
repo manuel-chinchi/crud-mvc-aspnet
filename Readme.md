@@ -1,7 +1,7 @@
 # Crud MVC Aspnet
 
  Sistema básico con operaciones CRUD hecho en MVC ASP.Net 4.5 y Entity Framework listo 
- para ejecutarse en un host.
+ para ejecutarse.
 
 ## ¿De qué trata esta aplicación?
 
