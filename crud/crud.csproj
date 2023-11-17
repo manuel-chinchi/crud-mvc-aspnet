@@ -155,9 +155,12 @@
     <Compile Include="Services\Contracts\ICategoryService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\crud_mvc_aspnet.mdf" />
+    <Content Include="App_Data\crud_mvc_aspnet.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Data\crud_mvc_aspnet_log.ldf">
       <DependentUpon>crud_mvc_aspnet.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
