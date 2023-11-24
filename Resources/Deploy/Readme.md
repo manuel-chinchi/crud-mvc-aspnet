@@ -15,13 +15,21 @@ los pasos son estos.
         <img src="iis_1.PNG" width="669px" height="527px">
       </p>
 
-      No debe quedar con la casilla marcada con negro, ya que eso indica que hay alguna subcasilla
+      No debe quedar ninguna casilla marcada con negro, ya que eso indica que hay alguna subcasilla
       que no esta marcada, por ende, algún componente no fue seleccionado en la activación de IIS.
 
       <p align="center">
           <img src="iis_2.PNG" width="600px" height="662px">
       </p>
-  
+    
+      Como referencia, en IIS deben verse todas las secciones que se muestran en la siguiente
+      caputra, en "Administración" & "ASP.NET" & "IIS" con todas las opciones que se ven. 
+      También en "Acciones" debe verse como se puede observar.  
+
+      <p align="center">
+          <img src="iis_4.PNG" width="1913px" height="906px">
+      </p> 
+
   2. Crear una carpeta en la ubicación `C:\inetpub\wwwroot\` por ej. `mi-sitio` y dejar 
     ahí los archivos del sitio web a probar.
 
