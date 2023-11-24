@@ -12,14 +12,14 @@ los pasos son estos.
     manera que queden como se ve a continuación.
 
       <p align="center">
-        <img src="iis_1.png" width="669px" height="527px">
+        <img src="iis_1.PNG" width="669px" height="527px">
       </p>
 
       No debe quedar con la casilla marcada con negro, ya que eso indica que hay alguna subcasilla
       que no esta marcada, por ende, algún componente no fue seleccionado en la activación de IIS.
 
       <p align="center">
-          <img src="iis_2.png" width="600px" height="662px">
+          <img src="iis_2.PNG" width="600px" height="662px">
       </p>
   
   2. Crear una carpeta en la ubicación `C:\inetpub\wwwroot\` por ej. `mi-sitio` y dejar 
@@ -70,3 +70,12 @@ los pasos son estos.
         opción **Examinar \*:82 (http)** y debería abrirse el navegador (En el caso que el
         sitio tenga configura otro puerto debe figurar ese y no el 82).
 
+
+## Referencias
+
+- https://stackoverflow.com/questions/26248293/sql-network-interfaces-error-50-local-database-runtime-error-occurred-canno
+- https://stackoverflow.com/questions/13308654/iis-connecting-to-localdb
+- https://web.archive.org/web/20190113153530/https://blogs.msdn.microsoft.com/sqlexpress/2011/12/08/using-localdb-with-full-iis-part-1-user-profile/
+- https://web.archive.org/web/20190119164902/https://blogs.msdn.microsoft.com/sqlexpress/2011/12/08/using-localdb-with-full-iis-part-2-instance-ownership/
+
+Muchas gracias a la comunidad de Stackoverflow :) 

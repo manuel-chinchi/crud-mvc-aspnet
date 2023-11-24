@@ -7,7 +7,7 @@
 
 Este proyecto consiste en un pequeño sistema de inventario con una base de datos 
 lista para usar y lógica de negocio mínima. 
-Todos los componentes usados en mayor o menos medida se listan a continuación
+Todos los componentes usados en mayor o menor medida se listan a continuación
 
   - [Entity Framework 6.0](https://www.nuget.org/packages/EntityFramework/6.0.0) (back-end)
   - [datatables 1.13.3](https://datatables.net/) (front-end)
@@ -44,12 +44,13 @@ Una vez instalados, seguir los siguientes pasos para iniciar el proyecto.
       </connectionStrings>
 
       ```
-  Asegurarse de que el apartado `connectionStrings` quede como se muestra arriba.
+      Asegurarse de que el apartado `connectionStrings` quede como se muestra arriba.
 
   4. Luego, en IIS seleccionar el sitio y en "Acciones" > "Examinar \*:8x (http)" para abrir el sitio.
   
-  **NOTA: Sí sale algún error al ejecutar la aplicación, revisar el documento general para 
-  desplegar aplicaciones que usan LocalDB en IIS desde [este enlace]().**
+      **NOTA: Sí sale algún error al querer ejecutar la aplicación, revisar este documento 
+      general para desplegar aplicaciones (paso a paso) que usan LocalDB en IIS 
+      desde [este enlace](Resources/Deploy/Readme.md).**
 
 ## Arquitectura de la aplicación
 
