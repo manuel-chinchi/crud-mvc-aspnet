@@ -186,6 +186,8 @@
     <Content Include="Scripts\buttons.html5.min.js" />
     <Content Include="Scripts\buttons.print.js" />
     <Content Include="Scripts\buttons.print.min.js" />
+    <Content Include="Scripts\datatables-config-articles.js" />
+    <Content Include="Scripts\datatables-config-categories.js" />
     <Content Include="Scripts\datatables-custom.js" />
     <Content Include="Scripts\dataTables.buttons.js" />
     <Content Include="Scripts\dataTables.buttons.min.js" />

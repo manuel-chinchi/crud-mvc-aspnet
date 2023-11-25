@@ -9,6 +9,7 @@
 @Html.Partial("_AlertNotify")
 
 @Styles.Render("~/Content/datatables")
+@Styles.Render("~/Content/datatables-buttons")
 
 <h3>@ViewBag.Title</h3>
 <p>@ViewBag.Message</p>
@@ -20,7 +21,7 @@
 </div>
 <br />
 <div class="table-responsive">
-    <table class="table table-striped">
+    <table id="table-categories" class="table table-striped">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -54,5 +55,6 @@
 </div>
 
 @section Scripts {
-    @Scripts.Render("~/bundles/datatables")
+    @Scripts.Render("~/bundles/datatables-categories")
+    @Scripts.Render("~/bundles/datatables-buttons")
 }

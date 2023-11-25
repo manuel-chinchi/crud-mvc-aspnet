@@ -3,7 +3,7 @@
 // https://datatables.net/extensions/buttons/examples/html5/columns.html
 
 $(document).ready(function () {
-    $('table').DataTable({
+    tableRef.DataTable({
         language: {
             info: 'Mostrando registro _START_ hasta el _END_',
             infoEmpty: '',
@@ -32,25 +32,25 @@ $(document).ready(function () {
                         extend: 'copy',
                         text: 'Copiar',
                         exportOptions: {
-                            columns: [0, 1, 2, 3, 4]
+                            columns: tableCols
                         }
                     },
                     {
                         extend: 'csv',
                         exportOptions: {
-                            columns: [0, 1, 2, 3, 4]
+                            columns: tableCols
                         }
                     },
                     {
                         extend: 'excel',
                         exportOptions: {
-                            columns: [0, 1, 2, 3, 4]
+                            columns: tableCols
                         }
                     },
                     {
                         extend: 'pdf',
                         exportOptions: {
-                            columns: [0, 1, 2, 3, 4]
+                            columns: tableCols
                         },
                     },
                 ],

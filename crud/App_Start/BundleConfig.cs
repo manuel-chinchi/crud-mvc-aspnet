@@ -39,9 +39,16 @@ namespace crud
                     "~/Content/datatables-buttons-custom.css"
                 ));
 
-            bundles.Add(new ScriptBundle("~/bundles/datatables").Include(
-                    "~/Scripts/datatables-custom.js",
-                    "~/Scripts/jquery.dataTables.min.js"
+            bundles.Add(new ScriptBundle("~/bundles/datatables-articles").Include(
+                    "~/Scripts/jquery.dataTables.min.js",
+                    "~/Scripts/datatables-config-articles.js",
+                    "~/Scripts/datatables-custom.js"
+                ));
+
+            bundles.Add(new ScriptBundle("~/bundles/datatables-categories").Include(
+                    "~/Scripts/jquery.dataTables.min.js",
+                    "~/Scripts/datatables-config-categories.js",
+                    "~/Scripts/datatables-custom.js"
                 ));
 
             // Los archivos jszip.min.jq, pdfmake.min.js y vfs_fonts.js no vienen en el paquete Nugget "datatables buttons"
