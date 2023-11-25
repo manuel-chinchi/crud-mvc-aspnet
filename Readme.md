@@ -65,8 +65,9 @@ Para una vista general, se presenta el diagrama de clases (archivo `ClassDiagram
 Pagina de lista de artículos.
 
 <p align="center">
-  <img src="Resources/Images/articles-list_details-responsive.png" width="650px" height="1236px">
+  <img src="Resources/Images/articles-list_details3.PNG" width="988px" height="734px">
 </p>
+
 
 Página de detalles de un artículo.
 
