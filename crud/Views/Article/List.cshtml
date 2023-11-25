@@ -9,6 +9,7 @@
 @Html.Partial("_AlertNotify")
 
 @Styles.Render("~/Content/datatables")
+@Styles.Render("~/Content/datatables-buttons")
 
 <h3>@ViewBag.Title</h3>
 <p>@ViewBag.Message</p>
@@ -52,4 +53,5 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/datatables")
+    @Scripts.Render("~/bundles/datatables-buttons")
 }
