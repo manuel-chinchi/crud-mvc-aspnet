@@ -26,6 +26,7 @@ $(document).ready(function () {
         buttons: [
             {
                 extend: 'collection',
+                background: false,
                 text: 'Exportar',
                 buttons: [
                     {
