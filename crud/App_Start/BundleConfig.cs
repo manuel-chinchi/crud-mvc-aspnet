@@ -69,6 +69,12 @@ namespace crud
                     "~/Scripts/buttons.html5.min.js",
                     "~/Scripts/buttons.print.min.js"
                 ));
+
+            bundles.Add(new Bundle("~/bundles/chartjs-categories").Include(
+                "~/Scripts/chart.min.js",
+                "~/Scripts/chartjs-custom.js",
+                "~/Scripts/chartjs-config-categories.js"
+                ));
         }
     }
 }

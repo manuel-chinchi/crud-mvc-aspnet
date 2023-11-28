@@ -1,0 +1,47 @@
+﻿@using crud.Models;
+
+@{
+    ViewBag.Title = "Gráficos de datos";
+}
+
+<style>
+    .chart-container {
+        position: relative;
+        width: 50vh;
+        height: 30vh;
+        margin: 0 auto; /* centra el grafico */
+    }
+
+    div.card-chart {
+        height: 35em;
+    }
+</style>
+
+<h3>Reportes</h3>
+<p>Lista de reportes</p>
+<br />
+
+<div class="">
+    <div class="card card-chart">
+        <div class="card-header">
+            Estadísticas
+        </div>
+        <div class="card-body chart-container">
+            @*<div class="row py-2">
+                <button id="btn-chart" class="btn btn-primary btn-sm px-3 mb-3">Generar</button>
+            </div>*@
+            <canvas id="chart-categories"></canvas>
+        </div>
+    </div>
+</div>
+
+@*hacer otro chart para Articles aquí, luego ocultarlo con hidden*@
+<br />
+<br />
+<br />
+<br />
+<br />
+
+@section Scripts {
+    @Scripts.Render("~/bundles/chartjs-categories")
+}

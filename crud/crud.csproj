@@ -186,6 +186,10 @@
     <Content Include="Scripts\buttons.html5.min.js" />
     <Content Include="Scripts\buttons.print.js" />
     <Content Include="Scripts\buttons.print.min.js" />
+    <Content Include="Scripts\chart.js" />
+    <Content Include="Scripts\chart.min.js" />
+    <Content Include="Scripts\chartjs-config-categories.js" />
+    <Content Include="Scripts\chartjs-custom.js" />
     <Content Include="Scripts\datatables-config-articles.js" />
     <Content Include="Scripts\datatables-config-categories.js" />
     <Content Include="Scripts\datatables-custom.js" />
@@ -268,6 +272,7 @@
     <Content Include="Views\Category\List.cshtml" />
     <Content Include="Views\Category\_ActionButtons.cshtml" />
     <Content Include="Views\Category\_Delete.cshtml" />
+    <Content Include="Views\Home\Reports.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Base\" />
