@@ -1,5 +1,8 @@
 ﻿var _chart; // debe ser global para poder volver a instanciar sin causar problemas
 
+// ejemplos
+// https://codepen.io/chartjs/pen/YVWZbz
+
 $(document).ready(function () {
     //btnChart.on('click', function () {
         $.ajax({
@@ -16,7 +19,6 @@ $(document).ready(function () {
                     dataContent.push(_data[i].quantity);
                 }
 
-                //var chartRef = $("#chart-categories");
                 if (_chart) {
                     _chart.destroy();
                 }
@@ -31,7 +33,7 @@ $(document).ready(function () {
                         }],
                     },
                     options: {
-                        responsive: true,
+                        /*responsive: true,*/
                         maintainAspectRadio: false,
                     }
                 });
