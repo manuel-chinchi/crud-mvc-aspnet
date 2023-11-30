@@ -1,14 +1,13 @@
-﻿var _chart; // debe ser global para poder volver a instanciar sin causar problemas
-var _chart2;
+﻿var chartInstance; // se hace global para poder volver a instanciar el grafico sin causar problemas (ejecutar F5 sin causar error)
+var chartInstance2; // idem.
 
 // ejemplos
 // https://codepen.io/chartjs/pen/YVWZbz
 
 $(document).ready(function () {
-    //btnChart.on('click', function () {
         $.ajax({
             type: "POST",
-            url: urlCategories,
+            url: urlDataCategories,
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             success: function (_data) {
@@ -20,37 +19,37 @@ $(document).ready(function () {
                     dataContent.push(_data[i].quantity);
                 }
 
-                if (_chart) {
-                    _chart.destroy();
+                if (chartInstance) {
+                    chartInstance.destroy();
                 }
 
                 // pie chart
-                _chart = new Chart(chartRef, {
+                chartInstance = new Chart(chartPie, {
                     type: 'pie',
                     data: {
                         labels: dataLabels,
-                        label: '---',
                         datasets: [{
                             data: dataContent,
                             backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],
                         }],
                     },
                     options: {
-                        /*responsive: true,*/
+                        // ADVERTENCIA: 
+                        // estas opciones pueden llegar a causar problemas de redimensionamiento erroneo en el grafico pie. Si se habilitan se
+                        // deben tambien ajustar las propiedades de la clase 'chart-container', o sea, el contenedor del elemento 'canvas', ver
+                        // los ejemplos en https://codepen.io/chartjs/pen/YVWZbz y https://www.chartjs.org/docs/latest/configuration/responsive.html#important-note
+
+                        //responsive: true,
                         //maintainAspectRatio: false,
 
                         //responsive: true,
-                        /*maintainAspectRatio: true,*/
+                        //maintainAspectRatio: true,
 
                     }
                 });
 
                 // bar chart
-                if (dataContent != null) {
-
-                }
-
-                _chart2 = new Chart(chartRefA, {
+                chartInstance2 = new Chart(chartBar, {
                     type: 'bar',
                     data: {
                         labels: dataLabels,
@@ -74,8 +73,6 @@ $(document).ready(function () {
                         }
                     },
                 });
-
-
             },
             error: function (error) {
                 console.log(error);

@@ -1,40 +1,14 @@
 ﻿@using crud.Models;
 
-@{
-    ViewBag.Title = "Gráficos de datos";
-}
-
 @Styles.Render("~/bundles/chartjs-custom-css")
 
 <h3>Reportes</h3>
 <p>Lista de reportes</p>
 <br />
 
-<style>
-    button.btn.btn-sm.dropdown-toggle {
-        padding: 0;
-        padding-bottom: 5px;
-    }
-
-        button.btn.btn-sm.dropdown-toggle:focus {
-            box-shadow: none;
-        }
-</style>
-
 <div class="">
     <div class="card card-chart">
         <div class="card-header">
-            @*Gráfico:*@
-            @*<div class="dropdown btn-group" style="min-width: 160px;">
-                    <button class="btn btn-sm  dropdown-toggle" data-toggle="dropdown">
-                        Otro
-                    </button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#" aria-valuetext="pie">Pastel</a>
-                        <a class="dropdown-item" href="#" aria-valuetext="bar">Barras</a>
-                        <a class="dropdown-item" href="#" aria-valuetext="">Otros</a>
-                    </div>
-                </div>*@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="btn-group w-100">
@@ -42,7 +16,6 @@
                         <select class="form-control form-control-sm">
                             <option value="pie">Pastel</option>
                             <option value="bar">Barras</option>
-                            @*<option value="">Otros</option>*@
                         </select>
                     </div>
                 </div>
@@ -50,15 +23,12 @@
         </div>
         <div class="card-body">
             <div class="chart-container">
-                <canvas id="chart-categories"></canvas>
-                <canvas id="chart-articles" style="display:none;"></canvas>
+                <canvas id="chart-pie"></canvas>
+                <canvas id="chart-bar" style="display:none;"></canvas>
             </div>
         </div>
     </div>
 </div>
-
-
-@*hacer otro chart para Articles aquí, luego ocultarlo con hidden*@
 
 @section Scripts {
     @Scripts.Render("~/bundles/chartjs-categories")

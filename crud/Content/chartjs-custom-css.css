@@ -10,10 +10,6 @@
         le debe definir la altura ya que sino el grafico se muestra con overflow  
 */
 
-div.card-chart {
-    /*height: 60vh;*/ /*hace que el 'div.card-body' tenga efecto overflow sobre el card */
-}
-
 .card-body {
     margin: auto;
     padding: 0;
@@ -25,9 +21,6 @@ div.card-chart {
     position: relative;
     margin: auto; /* centra el grafico */
     /*margin: 0 auto;*/
-}
-
-canvas {
 }
 
 @media (max-width: 359px) {

@@ -1,17 +1,18 @@
-﻿var urlCategories = "/Home/GetDataCategories";
-var chartRef = $("#chart-categories");
-var chartRefA = $("#chart-articles");
+﻿var urlDataCategories = "/Home/GetDataCategories";
+var chartPie = $("#chart-pie");
+var chartBar = $("#chart-bar");
 
 $(document).ready(function () {
+    /* enable and disable all type charts here */
     $('select').change(function () {
         var value = $(this).val();
         if (value == 'pie') {
-            chartRefA.hide();
-            chartRef.show();
+            chartBar.hide();
+            chartPie.show();
         }
         if (value == 'bar') {
-            chartRef.hide();
-            chartRefA.show();
+            chartPie.hide();
+            chartBar.show();
         }
     })
 });
