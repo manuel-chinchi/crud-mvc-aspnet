@@ -21,10 +21,8 @@ namespace crud.Controllers
 
         public JsonResult GetDataCategories()
         {
-            // implicit casting
-            //var dataCategories = categoryService.GetCategories().Select(c => new { name = c.Name, quantity = c.Articles.Count }).ToList();
-            // explicit casting
-            List<object> dataCategories = categoryService.GetCategories().
+            List<object> dataCategories = categoryService.
+                GetCategories().
                 Select(c => new
                 {
                     name = c.Name,
