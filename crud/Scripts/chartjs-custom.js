@@ -29,6 +29,7 @@ $(document).ready(function () {
                     type: 'pie',
                     data: {
                         labels: dataLabels,
+                        label: '---',
                         datasets: [{
                             data: dataContent,
                             backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],
@@ -45,6 +46,10 @@ $(document).ready(function () {
                 });
 
                 // bar chart
+                if (dataContent != null) {
+
+                }
+
                 _chart2 = new Chart(chartRefA, {
                     type: 'bar',
                     data: {
@@ -53,13 +58,20 @@ $(document).ready(function () {
                             data: dataContent,
                             backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],
                         }],
-                        borderWidth: 1
                     },
                     options: {
                         scales: {
-                            y: {beginAtZero: true}
+                            y: {
+                                max: 10,
+                                beginAtZero: true
+                            }
                         },
-                        maintainAspectRatio: false
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false // hide the 'undefined' top legend into chart
+                            }
+                        }
                     },
                 });
 
