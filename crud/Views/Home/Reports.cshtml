@@ -6,38 +6,6 @@
 
 @Styles.Render("~/bundles/chartjs-custom-css")
 
-<style>
-    /* --con esta configuracion (css+html) el 'chart-container' es el que define el tamaño tanto del elem. canvas como el del card-body, a este último no se
-        le debe definir la altura ya que sino el grafico se muestra con overflow -- */
-    .chart-container {
-        padding: 5px;
-        position: relative;
-        margin: auto;
-        /*height: 50vh;*/
-        /*max-height: 30vh;*/
-        /*width: 52vw;*/
-        /*margin: 0 auto;*/ /* centra el grafico */
-        border: 1px dotted green;
-    }
-
-    div.card-chart {
-        /*height: 60vh;*/ /*hace que el 'div.card-body' tenga efecto overflow sobre el card */
-        border: 1px dotted blue;
-    }
-    canvas {
-        border:1px dotted red;
-        /*height: 150px;*/
-    }
-    /*#chart-categories {
-        max-height: 355px;
-    }*/
-    .card-body {
-        margin: auto;
-        padding: 0;
-        /*height: 150px;*/
-    }
-</style>
-
 <h3>Reportes</h3>
 <p>Lista de reportes</p>
 <br />
@@ -55,17 +23,7 @@
     </div>
 </div>
 
-@*<div class="chart-container">
-    <canvas id="chart-categories"></canvas>
-</div>*@
-
-
 @*hacer otro chart para Articles aquí, luego ocultarlo con hidden*@
-<br />
-<br />
-<br />
-<br />
-<br />
 
 @section Scripts {
     @Scripts.Render("~/bundles/chartjs-categories")
