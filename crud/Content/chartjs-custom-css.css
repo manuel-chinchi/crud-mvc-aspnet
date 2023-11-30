@@ -20,6 +20,7 @@ div.card-chart {
 }
 
 .chart-container {
+    height: 400px;
     padding: 5px;
     position: relative;
     margin: auto; /* centra el grafico */

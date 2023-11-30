@@ -1,7 +1,4 @@
-﻿////const { post } = require("jquery");
-//const { Chart } = require("./chart");
-
-var _chart; // debe ser global para poder volver a instanciar sin causar problemas
+﻿var _chart; // debe ser global para poder volver a instanciar sin causar problemas
 var _chart2;
 
 // ejemplos
@@ -62,6 +59,7 @@ $(document).ready(function () {
                         scales: {
                             y: {beginAtZero: true}
                         },
+                        maintainAspectRatio: false
                     },
                 });
 
