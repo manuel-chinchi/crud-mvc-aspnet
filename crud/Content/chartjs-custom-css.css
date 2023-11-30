@@ -12,7 +12,6 @@
 
 div.card-chart {
     /*height: 60vh;*/ /*hace que el 'div.card-body' tenga efecto overflow sobre el card */
-    border: 1px dotted blue;
 }
 
 .card-body {
@@ -23,20 +22,16 @@ div.card-chart {
 .chart-container {
     padding: 5px;
     position: relative;
-    margin: auto;
-    /*margin: 0 auto;*/ /* centra el grafico */
-    border: 1px dotted green;
-    /*background-color: dodgerblue;*/
+    margin: auto; /* centra el grafico */
+    /*margin: 0 auto;*/
 }
 
 canvas {
-    border: 1px dotted red;
 }
 
 @media (max-width: 359px) {
     .chart-container {
         width: 80vw;
-        /*background-color: darkgray;*/
     }
 }
 
@@ -45,7 +40,6 @@ canvas {
         width: 330px;
         margin-top: 1.5em;
         margin-bottom: 1.5em;
-        /*background-color: yellow;*/
     }
 
     canvas#chart-categories {
@@ -55,13 +49,11 @@ canvas {
 
 @media (min-width: 576px) and (max-width:767px) {
     .chart-container {
-        /*background-color: greenyellow;*/
     }
 }
 
 @media (min-width:767px) {
     .chart-container {
         width: 400px;
-        /*background-color: indianred;*/
     }
 }
