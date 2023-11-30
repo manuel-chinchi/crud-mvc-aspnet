@@ -71,14 +71,14 @@ namespace crud
                     "~/Scripts/buttons.print.min.js"
                 ));
 
-            bundles.Add(new Bundle("~/bundles/chartjs-categories").Include(
+            bundles.Add(new Bundle("~/bundles/chartjs").Include(
                 "~/Scripts/chart.min.js",
                 "~/Scripts/chartjs-custom.js",
-                "~/Scripts/chartjs-config-categories.js"
+                "~/Scripts/chartjs-config.js"
                 ));
 
             bundles.Add(new StyleBundle("~/bundles/chartjs-custom-css").Include(
-                "~/Content/chartjs-custom-css.css"
+                "~/Content/chartjs-custom.css"
                 ));
         }
     }

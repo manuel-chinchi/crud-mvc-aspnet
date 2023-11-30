@@ -6,30 +6,28 @@
 <p>Lista de reportes</p>
 <br />
 
-<div class="">
-    <div class="card card-chart">
-        <div class="card-header">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="btn-group w-100">
-                        <label class="my-auto mr-2">Gráfico</label>
-                        <select class="form-control form-control-sm">
-                            <option value="pie">Pastel</option>
-                            <option value="bar">Barras</option>
-                        </select>
-                    </div>
+<div class="card card-chart">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="btn-group w-100">
+                    <label class="my-auto mr-2">Gráfico</label>
+                    <select class="form-control form-control-sm">
+                        <option value="pie">Pastel</option>
+                        <option value="bar">Barras</option>
+                    </select>
                 </div>
             </div>
         </div>
-        <div class="card-body">
-            <div class="chart-container">
-                <canvas id="chart-pie"></canvas>
-                <canvas id="chart-bar" style="display:none;"></canvas>
-            </div>
+    </div>
+    <div class="card-body">
+        <div class="chart-container">
+            <canvas id="chart-pie"></canvas>
+            <canvas id="chart-bar" style="display:none;"></canvas>
         </div>
     </div>
 </div>
 
 @section Scripts {
-    @Scripts.Render("~/bundles/chartjs-categories")
+    @Scripts.Render("~/bundles/chartjs")
 }
