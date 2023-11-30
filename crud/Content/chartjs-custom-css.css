@@ -1,0 +1,21 @@
+﻿/*-- si le aplico tamaño al 'canvas#chart-categories' y la prop. 'responsive:true' en el custom.js ahí el chart se hace responsivo, sino no
+        --*/
+
+/* si ajusto el ancho en unidades 'vw' en el 'chart-container' automaticamente el chart se ajusta al ancho de la pantalla, o sea, se hace responsivo
+    automaticamente. al parecer no hace falta que esten seteadas las propiedades 'responsive, & maintainAspectRatio' en el chart-custom.js. anda bien
+    ya con la configuracion por defecto.
+*/
+
+@media (max-width: 575px) {
+    .chart-container {
+        width: 60vw;
+        height: 40vh;
+        background-color: yellow;
+    }
+    /*canvas #chart-categories {
+        height: 100%;
+    }*/
+    canvas#chart-categories {
+        height: 100% !important;
+    }
+}

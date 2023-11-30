@@ -34,7 +34,11 @@ $(document).ready(function () {
                     },
                     options: {
                         /*responsive: true,*/
-                        maintainAspectRadio: false,
+                        //maintainAspectRadio: false,
+
+                        //responsive: true,
+                        /*maintainAspectRadio: true,*/
+
                     }
                 });
             },

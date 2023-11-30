@@ -168,6 +168,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\chartjs-custom-css.css" />
     <Content Include="Content\datatables-buttons-custom.css" />
     <Content Include="Content\buttons.dataTables.min.css" />
     <Content Include="Content\jquery.dataTables.min.css" />

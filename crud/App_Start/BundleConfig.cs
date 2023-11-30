@@ -75,6 +75,10 @@ namespace crud
                 "~/Scripts/chartjs-custom.js",
                 "~/Scripts/chartjs-config-categories.js"
                 ));
+
+            bundles.Add(new StyleBundle("~/bundles/chartjs-custom-css").Include(
+                "~/Content/chartjs-custom-css.css"
+                ));
         }
     }
 }
