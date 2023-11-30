@@ -1,4 +1,8 @@
-﻿var _chart; // debe ser global para poder volver a instanciar sin causar problemas
+﻿////const { post } = require("jquery");
+//const { Chart } = require("./chart");
+
+var _chart; // debe ser global para poder volver a instanciar sin causar problemas
+var _chart2;
 
 // ejemplos
 // https://codepen.io/chartjs/pen/YVWZbz
@@ -23,6 +27,7 @@ $(document).ready(function () {
                     _chart.destroy();
                 }
 
+                // pie chart
                 _chart = new Chart(chartRef, {
                     type: 'pie',
                     data: {
@@ -34,18 +39,37 @@ $(document).ready(function () {
                     },
                     options: {
                         /*responsive: true,*/
-                        //maintainAspectRadio: false,
+                        //maintainAspectRatio: false,
 
                         //responsive: true,
-                        /*maintainAspectRadio: true,*/
+                        /*maintainAspectRatio: true,*/
 
                     }
                 });
+
+                // bar chart
+                _chart2 = new Chart(chartRefA, {
+                    type: 'bar',
+                    data: {
+                        labels: dataLabels,
+                        datasets: [{
+                            data: dataContent,
+                            backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],
+                        }],
+                        borderWidth: 1
+                    },
+                    options: {
+                        scales: {
+                            y: {beginAtZero: true}
+                        },
+                    },
+                });
+
+
             },
             error: function (error) {
                 console.log(error);
             }
         });
-    //});
 });
 

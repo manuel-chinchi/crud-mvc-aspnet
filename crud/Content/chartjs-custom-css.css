@@ -55,5 +55,6 @@ canvas {
 @media (min-width:767px) {
     .chart-container {
         width: 400px;
+        min-height: 400px;
     }
 }
