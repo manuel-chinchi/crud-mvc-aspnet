@@ -1,6 +1,8 @@
-﻿using System;
+﻿using crud.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Dynamic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -16,6 +18,17 @@ namespace crud.Controllers
 
         public ActionResult Reports()
         {
+            var charTypes = new List<ChartInfo>()
+            {
+                new ChartInfo() {Name = "Pastel", Value = "pie" },
+                new ChartInfo() {Name = "Barras", Value = "bar" }
+            };
+
+            ViewBag.ChartTypes = charTypes;
+
+            ViewBag.Title = "Reportes";
+            ViewBag.Message = "Lista de reportes";
+
             return View();
         }
 

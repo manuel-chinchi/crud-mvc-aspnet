@@ -2,8 +2,8 @@
 
 @Styles.Render("~/bundles/chartjs-custom")
 
-<h3>Reportes</h3>
-<p>Lista de reportes</p>
+<h3>@ViewBag.Title</h3>
+<p>@ViewBag.Message</p>
 <br />
 
 <div class="card card-chart">
@@ -13,8 +13,10 @@
                 <div class="btn-group w-100">
                     <label class="my-auto mr-2">Gráfico</label>
                     <select class="form-control form-control-sm">
-                        <option value="pie">Pastel</option>
-                        <option value="bar">Barras</option>
+                        @foreach (ChartInfo item in ViewBag.ChartTypes)
+                        {
+                            <option value="@item.Value">@item.Name</option>
+                        }
                     </select>
                 </div>
             </div>
