@@ -132,6 +132,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -148,6 +149,7 @@
     <Compile Include="Models\ApplicationContext.cs" />
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\ChartInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ArticleService.cs" />
     <Compile Include="Services\CategoryService.cs" />
@@ -168,6 +170,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\chartjs-custom.css" />
     <Content Include="Content\datatables-buttons-custom.css" />
     <Content Include="Content\buttons.dataTables.min.css" />
     <Content Include="Content\jquery.dataTables.min.css" />
@@ -186,6 +189,10 @@
     <Content Include="Scripts\buttons.html5.min.js" />
     <Content Include="Scripts\buttons.print.js" />
     <Content Include="Scripts\buttons.print.min.js" />
+    <Content Include="Scripts\chart.js" />
+    <Content Include="Scripts\chart.min.js" />
+    <Content Include="Scripts\chartjs-config.js" />
+    <Content Include="Scripts\chartjs-custom.js" />
     <Content Include="Scripts\datatables-config-articles.js" />
     <Content Include="Scripts\datatables-config-categories.js" />
     <Content Include="Scripts\datatables-custom.js" />
@@ -268,6 +275,7 @@
     <Content Include="Views\Category\List.cshtml" />
     <Content Include="Views\Category\_ActionButtons.cshtml" />
     <Content Include="Views\Category\_Delete.cshtml" />
+    <Content Include="Views\Report\Reports.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Base\" />

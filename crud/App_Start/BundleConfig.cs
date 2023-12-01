@@ -20,6 +20,7 @@ namespace crud
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                //"~/Scripts/umd/popper.js",
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
@@ -68,6 +69,16 @@ namespace crud
                     //"~/Scripts/buttons.colVis.min.js",
                     "~/Scripts/buttons.html5.min.js",
                     "~/Scripts/buttons.print.min.js"
+                ));
+
+            bundles.Add(new Bundle("~/bundles/chartjs").Include(
+                "~/Scripts/chart.min.js",
+                "~/Scripts/chartjs-custom.js",
+                "~/Scripts/chartjs-config.js"
+                ));
+
+            bundles.Add(new StyleBundle("~/bundles/chartjs-custom").Include(
+                "~/Content/chartjs-custom.css"
                 ));
         }
     }

@@ -1,0 +1,35 @@
+﻿@using crud.Models;
+
+@Styles.Render("~/bundles/chartjs-custom")
+
+<h3>@ViewBag.Title</h3>
+<p>@ViewBag.Message</p>
+<br />
+
+<div class="card card-chart">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="btn-group w-100">
+                    <label class="my-auto mr-2">Gráfico</label>
+                    <select class="form-control form-control-sm">
+                        @foreach (ChartInfo item in ViewBag.ChartTypes)
+                        {
+                            <option value="@item.Value">@item.Name</option>
+                        }
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="chart-container">
+            <canvas id="chart-pie"></canvas>
+            <canvas id="chart-bar" style="display:none;"></canvas>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/chartjs")
+}
