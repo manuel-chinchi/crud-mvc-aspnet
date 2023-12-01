@@ -1,4 +1,4 @@
-﻿var urlDataCategories = "/Home/GetDataCategories";
+﻿var urlDataCategories = "/Report/GetDataCategories";
 var chartPie = $("#chart-pie");
 var chartBar = $("#chart-bar");
 

@@ -132,6 +132,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -274,7 +275,7 @@
     <Content Include="Views\Category\List.cshtml" />
     <Content Include="Views\Category\_ActionButtons.cshtml" />
     <Content Include="Views\Category\_Delete.cshtml" />
-    <Content Include="Views\Home\Reports.cshtml" />
+    <Content Include="Views\Report\Reports.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Base\" />
