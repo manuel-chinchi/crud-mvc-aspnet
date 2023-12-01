@@ -85,5 +85,6 @@ los pasos son estos.
 - https://stackoverflow.com/questions/13308654/iis-connecting-to-localdb
 - https://web.archive.org/web/20190113153530/https://blogs.msdn.microsoft.com/sqlexpress/2011/12/08/using-localdb-with-full-iis-part-1-user-profile/
 - https://web.archive.org/web/20190119164902/https://blogs.msdn.microsoft.com/sqlexpress/2011/12/08/using-localdb-with-full-iis-part-2-instance-ownership/
+- https://www.youtube.com/watch?v=kfTxIyGNJK4 (deploy)
 
 Muchas gracias a la comunidad de Stackoverflow :) 
