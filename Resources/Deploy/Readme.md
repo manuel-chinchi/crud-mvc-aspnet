@@ -30,10 +30,18 @@ los pasos son estos.
           <img src="iis_4.PNG" width="1913px" height="906px">
       </p> 
 
-  2. Crear una carpeta en la ubicación `C:\inetpub\wwwroot\` por ej. `mi-sitio` y dejar 
-    ahí los archivos del sitio web a probar.
+  2. Crear una carpeta en la ubicación `C:\inetpub\wwwroot\` por ej. `mi-sitio`, esto es para guardar los archivos de nuestro sitio web.
 
-  3. Entrar a IIS, en la sección **Conexiones** > **Agregar sitio web...** y ahí completar 
+  3. **IMPORTANTE**: Abrir "Propiedades" de la carpeta `mi-sitio` luego en la pestaña "Compartir" > botón "Compartir..." y agregar al usuario "Todos" con
+      permisos de "Lecura y Escritura". **ESTO ES SUMAMENTE IMPORTANTE YA QUE SINO LA APLICACIÓN PUEDE LLEGAR A ANDAR PERO AL QUERER MODIFICAR LA BASE
+      DE DATOS (hacer un insert), PUEDE SALIR ALGÚN ERROR COMO ESTE**.
+        - ERROR: "Error de servidor en la aplicación '/'"
+        - ERROR: "Failed to update database C:\INETPUB\WWWROOT\..\..\CRUD_MVC_ASPNET.MDF because the database is read-only."
+        - ERROR: "Cannot create file *.mdf because it already exists"
+    
+  4. Ahora sí, volcar los archivos de nuestro sitio a la carpeta `C:\inetpub\wwwroot\mi-sitio\`.
+
+  5. Entrar a IIS, en la sección **Conexiones** > **Agregar sitio web...** y ahí completar 
     los siguientes campos.
 
         - **Nombre del sitio** nombre cualquiera
@@ -45,7 +53,7 @@ los pasos son estos.
         Luego elegir un puerto que no este en uso y darle a **Aceptar**, solo estos campos son 
         necesarios para completar.
 
-   4. Ahora modificar el archivo `applicationHost.config` que se encuentra en la ruta
+   6. Ahora modificar el archivo `applicationHost.config` que se encuentra en la ruta
         `C:\Windows\System32\inetsrv\config\`. Dentro del archivo buscar el apartado donde esta
         el campo `<applicationPools>` debería verse algo así.
 
@@ -74,7 +82,7 @@ los pasos son estos.
             </applicationPoolDefaults>
         ```
     
-   5. Listo, luego en **IIS** > sección **Acciones** > **Examinar sitio web** elegir la 
+   7. Listo, luego en **IIS** > sección **Acciones** > **Examinar sitio web** elegir la 
         opción **Examinar \*:82 (http)** y debería abrirse el navegador (En el caso que el
         sitio tenga configura otro puerto debe figurar ese y no el 82).
 
