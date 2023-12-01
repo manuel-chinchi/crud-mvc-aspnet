@@ -1,4 +1,4 @@
-# Crud MVC Aspnet
+# Crud MVC ASP.NET
 
  Sistema básico con operaciones CRUD hecho en MVC ASP.Net 4.5 y Entity Framework listo 
  para ejecutarse.
@@ -62,7 +62,7 @@ Para una vista general, se presenta el diagrama de clases (archivo `ClassDiagram
 
 ## Capturas
 
-Pagina de lista de artículos.
+Página de lista de artículos.
 
 <p align="center">
   <img src="Resources/Images/articles-list_details3.PNG" width="988px" height="734px">
