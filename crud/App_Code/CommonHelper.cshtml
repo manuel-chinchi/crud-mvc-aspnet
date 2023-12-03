@@ -1,0 +1,18 @@
+﻿@using crud.Models
+
+@helper DisplayCategoryList(List<Category> categories, string categorySelected = null)
+{
+    <select class="form-control form-control-sm" name="CategoryId">
+        @foreach (Category c in categories)
+        {
+            if (!string.IsNullOrEmpty(categorySelected) && c.Name == categorySelected)
+            {
+                <option value="@c.Id" selected>@c.Name</option>
+            }
+            else
+            {
+                <option value="@c.Id">@c.Name</option>
+            }
+        }
+    </select>
+}
