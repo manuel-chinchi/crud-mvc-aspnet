@@ -37,8 +37,7 @@ namespace crud
             // El archivo buttons.dataTables.min.css no viene en el paquete Nugget "datatables buttons"
             // se instala aparte desde https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css
             bundles.Add(new StyleBundle("~/Content/datatables-buttons").Include(
-                    "~/Content/buttons.dataTables.min.css",
-                    "~/Content/datatables-buttons-custom.css"
+                    "~/Content/buttons.dataTables.min.css"
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/datatables-articles").Include(
