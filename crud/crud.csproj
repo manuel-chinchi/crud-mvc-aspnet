@@ -173,6 +173,7 @@
     <Content Include="Content\chartjs-custom.css" />
     <Content Include="Content\datatables-buttons-custom.css" />
     <Content Include="Content\buttons.dataTables.min.css" />
+    <Content Include="Content\datatables-custom.css" />
     <Content Include="Content\jquery.dataTables.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
