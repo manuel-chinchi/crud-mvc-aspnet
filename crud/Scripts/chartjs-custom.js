@@ -78,5 +78,26 @@ $(document).ready(function () {
                 console.log(error);
             }
         });
+
+    $("#btn-download-chart").on("click", function () {
+        var chartIns;
+        var chartName;
+
+        if (!chartPie.is(":hidden")) {
+            chartIns = chartInstance;
+            chartName = "chart_pie.png";
+        }
+        if (!chartBar.is(":hidden")) {
+            chartIns = chartInstance2;
+            chartName = "chart_bar.png";
+        }
+
+        var image = chartIns.toBase64Image();
+        var a = document.createElement('a');
+        a.href = image;
+        a.download = chartName;
+
+        a.click();
+    });
 });
 

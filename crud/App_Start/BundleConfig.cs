@@ -30,14 +30,14 @@ namespace crud
             // El archivo jquery.dataTables.min.css no viene junto al paquete Nugget
             // de la solución, se instala aparte desde https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css
             bundles.Add(new StyleBundle("~/Content/datatables").Include(
-                    "~/Content/jquery.dataTables.min.css"
+                    "~/Content/jquery.dataTables.min.css",
+                    "~/Content/datatables-custom.css"
                 ));
 
             // El archivo buttons.dataTables.min.css no viene en el paquete Nugget "datatables buttons"
             // se instala aparte desde https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css
             bundles.Add(new StyleBundle("~/Content/datatables-buttons").Include(
-                    "~/Content/buttons.dataTables.min.css",
-                    "~/Content/datatables-buttons-custom.css"
+                    "~/Content/buttons.dataTables.min.css"
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/datatables-articles").Include(
