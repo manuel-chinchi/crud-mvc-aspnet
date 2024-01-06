@@ -38,14 +38,7 @@
                     <td>@Html.DisplayFor(model => category.Name)</td>
                     <td>@Html.DisplayFor(model => category.Articles.Count)</td>
                     <td class="py-1">
-                        @if (category.Articles.Count == 0)
-                        {
-                            @Html.Partial("_ActionButtons", category)
-                        }
-                        else
-                        {
-                            <p class="m-0">No disponible</p>
-                        }
+                        @Html.Partial("_ActionButtons", category)
                     </td>
                 </tr>
             }

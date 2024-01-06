@@ -80,6 +80,12 @@ namespace crud
             bundles.Add(new StyleBundle("~/bundles/chartjs-custom").Include(
                 "~/Content/chartjs-custom.css"
                 ));
+
+            bundles.Add(new Bundle("~/Content/fontawesome").Include(
+                "~/Content/lib/fontawesome/css/font-awesome.css",
+                "~/Content/lib/fontawesome/css/fonts/fontawesome-webfont.woff",
+                "~/Content/lib/fontawesome/css/fonts/fontawesome-webfont.woff2"
+                ));
         }
     }
 }

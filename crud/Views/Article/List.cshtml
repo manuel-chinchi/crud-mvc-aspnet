@@ -33,16 +33,16 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (Article item in Model)
+            @foreach (Article article in Model)
             {
                 <tr>
-                    <th scope="row">@Html.DisplayFor(model => item.Id)</th>
-                    <td>@Html.DisplayFor(model => item.Name)</td>
-                    <td>@Html.DisplayFor(model => item.Category.Name)</td>
-                    <td>@Html.DisplayFor(model => item.Description)</td>
-                    <td>@Html.DisplayFor(model => item.Quantity)</td>
+                    <th scope="row">@Html.DisplayFor(model => article.Id)</th>
+                    <td>@Html.DisplayFor(model => article.Name)</td>
+                    <td>@Html.DisplayFor(model => article.Category.Name)</td>
+                    <td>@Html.DisplayFor(model => article.Description)</td>
+                    <td>@Html.DisplayFor(model => article.Quantity)</td>
                     <td class="py-1">
-                        @Html.Partial("_ActionButtons", item)
+                        @Html.Partial("_ActionButtons", article)
                     </td>
                 </tr>
             }
