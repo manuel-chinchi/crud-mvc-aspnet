@@ -86,6 +86,11 @@ namespace crud
                 "~/Content/lib/fontawesome/css/fonts/fontawesome-webfont.woff",
                 "~/Content/lib/fontawesome/css/fonts/fontawesome-webfont.woff2"
                 ));
+
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap-custom").Include(
+                "~/Scripts/bootstrap.bundle.min.js",
+                "~/Scripts/bootstrap-custom.js"
+                ));
         }
     }
 }

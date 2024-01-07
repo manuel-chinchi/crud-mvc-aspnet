@@ -15,8 +15,12 @@
     }
     else
     {
-        <button class="btn btn-warning btn-sm text-white" disabled><span class="fa fa-exclamation-circle"></span></button>
+        <button class="btn btn-warning btn-sm text-white" title="@ViewBag.TooltipText" data-toggle="tooltip" data-placement="top" disabled><span class="fa fa-exclamation-circle"></span></button>
     }
 }
 
 @Html.Partial("_Delete", Model)
+
+@section BootstrapCustom {
+    @Scripts.Render("~/bundles/bootstrap-custom")
+}
