@@ -4,13 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - crud_mvc_aspnet</title>
+    <link rel="stylesheet" href="@ViewBag.ThemeOn" id="bootstrap-theme" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/Content/fontawesome")
+    @*<link href="~/Content/bootstrap-darkly.css"/>*@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-default bg-default border-bottom box-shadow mb-3">
             <div class="container">
                 @Html.ActionLink("crud_mvc_aspnet", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -20,7 +22,7 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item dropdown">
-                            @Html.ActionLink("Artículos", "Create", "Article", null, new { @class = "nav-link dropdown-toggle text-white", data_toggle = "dropdown" })
+                            @Html.ActionLink("Artículos", "Create", "Article", null, new { @class = "nav-link dropdown-toggle", data_toggle = "dropdown" })
                             <div class="dropdown-menu">
                                 @Html.ActionLink("Agregar", "Create", "Article", null, htmlAttributes: new { @class = "dropdown-item" })
                                 <div role="separator" class="dropdown-divider"></div>
@@ -28,7 +30,7 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            @Html.ActionLink("Categorías", "Create", "Category", null, new { @class = "nav-link dropdown-toggle text-white", data_toggle = "dropdown" })
+                            @Html.ActionLink("Categorías", "Create", "Category", null, new { @class = "nav-link dropdown-toggle", data_toggle = "dropdown" })
                             <div class="dropdown-menu">
                                 @Html.ActionLink("Agregar", "Create", "Category", null, new { @class = "dropdown-item" })
                                 <div role="separator" class="dropdown-divider"></div>
@@ -36,8 +38,9 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            @Html.ActionLink("Reportes", "Reports", "Report", null, new { @class = "nav-link text-white" })
+                            @Html.ActionLink("Reportes", "Reports", "Report", null, new { @class = "nav-link" })
                         </li>
+                        @Html.Partial("_ButtonDarkMode")
                     </ul>
                 </div>
             </div>
@@ -58,5 +61,6 @@
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
     @Scripts.Render("~/bundles/bootstrap-custom")
+    <script src="~/Scripts/button-dark-mode.js"></script>
 </body>
 </html>

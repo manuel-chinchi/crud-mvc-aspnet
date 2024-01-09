@@ -24,7 +24,7 @@ namespace crud
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      //"~/Content/bootstrap.css",
                       "~/Content/site.css"));
 
             // El archivo jquery.dataTables.min.css no viene junto al paquete Nugget

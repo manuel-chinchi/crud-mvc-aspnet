@@ -22,7 +22,7 @@ namespace crud.Controllers
                 { "urlJszip", "https://stuk.github.io/jszip/" },
                 { "urlPdfmake", "http://pdfmake.org/#/" },
                 { "title", "Información del proyecto" },
-                { "message", "Sistema CRUD hecho en C# ASP.NET" },
+                { "message", "Sistema CRUD hecho en C# .NET Framework" },
                 { "repository", "https://github.com/manuel-chinchi/crud-mvc-aspnet"  }
             };
 

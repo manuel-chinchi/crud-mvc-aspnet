@@ -164,6 +164,7 @@
       <DependentUpon>crud_mvc_aspnet.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\bootstrap-darkly.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -183,6 +184,7 @@
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\button-dark-mode.js" />
     <Content Include="Scripts\buttons.colVis.js" />
     <Content Include="Scripts\buttons.colVis.min.js" />
     <Content Include="Scripts\buttons.flash.js" />
@@ -281,6 +283,7 @@
     <Content Include="Views\Category\_ActionButtons.cshtml" />
     <Content Include="Views\Category\_Delete.cshtml" />
     <Content Include="Views\Report\Reports.cshtml" />
+    <Content Include="Views\Shared\_ButtonDarkMode.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
