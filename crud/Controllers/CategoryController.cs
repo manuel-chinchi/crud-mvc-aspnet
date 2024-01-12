@@ -23,9 +23,9 @@ namespace crud.Controllers
             if (ModelState.IsValid)
             {
                 categoryService.CreateCategory(category);
-                
+
                 TempData["AlertMessage"] = "Se ha agregado la categoría.";
-                TempData["AlertStyle"] = AlertConstants.SUCCESS;
+                TempData["AlertType"] = AlertType.SUCCESS;
 
                 return RedirectToAction("List");
             }
@@ -36,7 +36,7 @@ namespace crud.Controllers
         public ActionResult Delete(int id)
         {
             TempData["AlertMessage"] = "Se ha eliminado la categoría '" + categoryService.GetCategory(id).Name + "'";
-            TempData["AlertStyle"] = AlertConstants.SUCCESS;
+            TempData["AlertType"] = AlertType.SUCCESS;
 
             categoryService.DeleteCategory(id);
 

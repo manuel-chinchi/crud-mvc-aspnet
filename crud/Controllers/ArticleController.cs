@@ -28,7 +28,7 @@ namespace crud.Controllers
                 articleService.CreateArticle(article);
 
                 TempData["AlertMessage"] = "Se ha agregado el artículo";
-                TempData["AlertStyle"] = AlertConstants.SUCCESS;
+                TempData["AlertType"] = AlertType.SUCCESS;
 
                 return RedirectToAction("List");
             }
@@ -55,7 +55,7 @@ namespace crud.Controllers
                 articleService.UpdateArticle(article);
 
                 TempData["AlertMessage"] = "Se ha actualizado el artículo";
-                TempData["AlertStyle"] = AlertConstants.SUCCESS;
+                TempData["AlertType"] = AlertType.SUCCESS;
 
                 return RedirectToAction("List");
             }
@@ -66,7 +66,7 @@ namespace crud.Controllers
         public ActionResult Delete(int id)
         {
             TempData["AlertMessage"] = "Se ha eliminado el artículo '" + articleService.GetArticle(id).Name + "'";
-            TempData["AlertStyle"] = AlertConstants.SUCCESS;
+            TempData["AlertType"] = AlertType.SUCCESS;
 
             articleService.DeleteArticle(id);
 

@@ -1,6 +1,28 @@
-﻿@if (TempData["AlertMessage"] != null)
+﻿@*https://freefrontend.com/bootstrap-alerts/*@
+@*https://stackoverflow.com/questions/23101966/bootstrap-alert-auto-close*@
+
+@using crud.Models;
+
+@if (TempData["AlertMessage"] != null)
 {
-    <div class="@TempData["AlertStyle"]" role="alert">
+    string classNotify = null;
+
+    switch ((AlertType)TempData["AlertType"])
+    {
+        case AlertType.SUCCESS:
+            classNotify = "alert-success";
+            break;
+
+        case AlertType.WARNING:
+            classNotify = "alert-warning";
+            break;
+
+        case AlertType.ERROR:
+            classNotify = "alert-error";
+            break;
+    }
+
+    <div class="alert @classNotify alert-dismissible fade show" role="alert">
         <p>@TempData["AlertMessage"]</p>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
