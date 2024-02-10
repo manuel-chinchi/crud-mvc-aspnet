@@ -284,6 +284,7 @@
     <Content Include="Views\Category\_Delete.cshtml" />
     <Content Include="Views\Report\Reports.cshtml" />
     <Content Include="Views\Shared\_ButtonDarkMode.cshtml" />
+    <Content Include="Views\Shared\_PopupNotify.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
