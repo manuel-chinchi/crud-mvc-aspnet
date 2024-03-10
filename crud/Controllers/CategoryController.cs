@@ -22,7 +22,7 @@ namespace crud.Controllers
         {
             if (ModelState.IsValid)
             {
-                categoryService.CreateCategory(category);
+                _categoryService.CreateCategory(category);
 
                 TempData["AlertMessage"] = "Se ha agregado la categoría.";
                 TempData["AlertType"] = AlertType.SUCCESS;
@@ -35,10 +35,10 @@ namespace crud.Controllers
 
         public ActionResult Delete(int id)
         {
-            TempData["AlertMessage"] = "Se ha eliminado la categoría '" + categoryService.GetCategory(id).Name + "'";
+            TempData["AlertMessage"] = "Se ha eliminado la categoría '" + _categoryService.GetCategory(id).Name + "'";
             TempData["AlertType"] = AlertType.SUCCESS;
 
-            categoryService.DeleteCategory(id);
+            _categoryService.DeleteCategory(id);
 
             return RedirectToAction("List");
         }
@@ -48,7 +48,7 @@ namespace crud.Controllers
             ViewBag.Message = "Lista de categorias existentes.";
             ViewBag.TooltipText = "No se pueden borrar categorías con artículos relacionados.";
 
-            return View(categoryService.GetCategories());
+            return View(_categoryService.GetCategories());
         }
     }
 }

@@ -10,13 +10,13 @@ namespace crud.Controllers
 {
     public class BaseController : Controller
     {
-        protected IArticleService articleService { get; set; }
-        protected ICategoryService categoryService { get; set; }
+        protected readonly IArticleService _articleService;
+        protected readonly ICategoryService _categoryService;
 
         public BaseController()
         {
-            articleService = new ArticleService();
-            categoryService = new CategoryService();
+            _articleService = new ArticleService();
+            _categoryService = new CategoryService();
         }
 
         #region Configure theme

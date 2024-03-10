@@ -13,7 +13,7 @@ namespace crud.Controllers
         public ActionResult Create()
         {
             ViewBag.Message = "Ingrese los datos del artículo";
-            ViewBag.Categories = categoryService.GetCategories();
+            ViewBag.Categories = _categoryService.GetCategories();
 
             return View();
         }
@@ -21,11 +21,11 @@ namespace crud.Controllers
         [HttpPost]
         public ActionResult Create(Article article)
         {
-            article.Category = categoryService.GetCategory(article.CategoryId);
+            article.Category = _categoryService.GetCategory(article.CategoryId);
 
             if (ModelState.IsValid)
             {
-                articleService.CreateArticle(article);
+                _articleService.CreateArticle(article);
 
                 TempData["AlertMessage"] = "Se ha agregado el artículo";
                 TempData["AlertType"] = AlertType.SUCCESS;
@@ -40,19 +40,19 @@ namespace crud.Controllers
         public ActionResult Edit(int id)
         {
             ViewBag.Message = "Datos del artículo";
-            ViewBag.Categories = categoryService.GetCategories();
+            ViewBag.Categories = _categoryService.GetCategories();
 
-            return View(articleService.GetArticle(id));
+            return View(_articleService.GetArticle(id));
         }
 
         [HttpPost]
         public ActionResult Edit(Article article)
         {
-            article.Category = categoryService.GetCategory(article.CategoryId);
+            article.Category = _categoryService.GetCategory(article.CategoryId);
 
             if (ModelState.IsValid)
             {
-                articleService.UpdateArticle(article);
+                _articleService.UpdateArticle(article);
 
                 TempData["AlertMessage"] = "Se ha actualizado el artículo";
                 TempData["AlertType"] = AlertType.SUCCESS;
@@ -65,10 +65,10 @@ namespace crud.Controllers
 
         public ActionResult Delete(int id)
         {
-            TempData["AlertMessage"] = "Se ha eliminado el artículo '" + articleService.GetArticle(id).Name + "'";
+            TempData["AlertMessage"] = "Se ha eliminado el artículo '" + _articleService.GetArticle(id).Name + "'";
             TempData["AlertType"] = AlertType.SUCCESS;
 
-            articleService.DeleteArticle(id);
+            _articleService.DeleteArticle(id);
 
             return RedirectToAction("List");
         }
@@ -76,7 +76,7 @@ namespace crud.Controllers
         public ActionResult List()
         {
             ViewBag.Message = "Lista de artículos existentes";
-            return View(articleService.GetArticles());
+            return View(_articleService.GetArticles());
         }
     }
 }

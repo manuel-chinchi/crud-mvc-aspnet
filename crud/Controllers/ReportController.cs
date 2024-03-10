@@ -29,7 +29,7 @@ namespace crud.Controllers
         [Route(Name = "/Report/GetDataCategories")]
         public JsonResult GetDataCategories()
         {
-            List<object> dataCategories = categoryService.
+            List<object> dataCategories = _categoryService.
                 GetCategories().
                 Select(c => new
                 {
