@@ -62,22 +62,35 @@ Para una vista general, se presenta el diagrama de clases (archivo `ClassDiagram
 
 ## Capturas
 
-Página de lista de artículos.
+Lista de artículos
 
 <p align="center">
-  <img src="Resources/Images/articles-list_details3.PNG" width="988px" height="734px">
+  <img src="Resources/Images/article-list-page.png">
 </p>
 
-
-Página de detalles de un artículo.
+Reportes
 
 <p align="center">
-  <img src="Resources/Images/article-details.png" width="630px" height="662px">
+  <img src="Resources/Images/report-page.png">
+</p>
+
+Modo nocturno
+
+Lista de artículos
+
+<p align="center">
+  <img src="Resources/Images/article-list-page-dark.png">
+</p>
+
+Reportes
+
+<p align="center">
+  <img src="Resources/Images/report-page-dark.png">
 </p>
 
 ## Demostración
 
-https://user-images.githubusercontent.com/88981972/233879807-b1d2f422-6fdb-4d00-b366-6c6c44391dc6.mp4
+<!-- https://user-images.githubusercontent.com/88981972/233879807-b1d2f422-6fdb-4d00-b366-6c6c44391dc6.mp4 -->
  
 ## Errores al ejecutar la aplicación 
 
