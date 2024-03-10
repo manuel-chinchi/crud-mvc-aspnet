@@ -92,9 +92,10 @@ Reportes
 
 <!-- https://user-images.githubusercontent.com/88981972/233879807-b1d2f422-6fdb-4d00-b366-6c6c44391dc6.mp4 -->
  
-## Errores al ejecutar la aplicación 
+## Referencias útiles
 
-### *No se puede encontrar una parte de la ruta de acceso ...\bin\roslyn\csc.exe*
+* **No se puede encontrar una parte de la ruta de acceso ...\bin\roslyn\csc.exe**  
+    Solución: Ejecutar el siguiente comando `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform` desde la consola de administración de paquetes Nugget. 
 
-Solución: Ejecutar el siguiente comando `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform`
-desde la consola de administración de paquetes Nugget. 
+* **Convención de nombres**  
+    https://dvoituron.com/naming-conventions/rules/
