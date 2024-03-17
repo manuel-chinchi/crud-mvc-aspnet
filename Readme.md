@@ -102,6 +102,7 @@ Reportes
        tareas (Ctrl + Alt + Supr > Administrador de tareas) y cerrar los siguientes procesos
        - SmSvcHost.exe
        - VBCSCompiler.exe
+       
        Luego, volver a abrir la solución con Visual Studio IDE
 
 * **Convención de nombres**  
