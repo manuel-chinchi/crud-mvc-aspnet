@@ -98,10 +98,11 @@ Reportes
     Si al querer ejecutar la solución luego de haber descargado el aplicativo con `git clone` da el mensaje de error indicado
     probar lo siguiente:
     1. Ejecutar el comando `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform` desde la consola de administración de paquetes Nugget.
-    2. Cerrar la isntancia de Visual Studio IDE, borrar la carpeta `.vs` que se genera en el directorio del aplicativo, ir al administrador de
+    2. Cerrar la isntancia de Visual Studio IDE, borrar la carpeta `.vs` que se genera en el directorio de la solución, ir al administrador de
        tareas (Ctrl + Alt + Supr > Administrador de tareas) y cerrar los siguientes procesos
        - SmSvcHost.exe
        - VBCSCompiler.exe
+       Luego, volver a abrir la solución con Visual Studio IDE
 
 * **Convención de nombres**  
     https://dvoituron.com/naming-conventions/rules/
