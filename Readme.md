@@ -109,7 +109,7 @@ Reportes
     https://dvoituron.com/naming-conventions/rules/
 
 *	**Error: ERR_SSL_VERSION_OR_CIPHER_MISMATCH en el navegador al ejecutar aplicacion en Windows 7**  
-	Este error se produce porque Windows 7 no tiene deshabilitado por defecto TLS 1.2 en el registro. Por ende tiene dos opciones para poder ejecutar la aplicación.
+	Este error se produce porque Windows 7 tiene deshabilitado por defecto TLS 1.2 en el registro. Por ende tiene dos opciones para poder ejecutar la aplicación.
 	
 	1. Habilitar TLS 1.2 en el registro de Windows 7 como se indica [aquí](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings?tabs=diffie-hellman#tls-12).
 	2. Deshabilitar SSL del proyecto como se indica [aquí](http://dotnet-concept.com/Tips/2019/12/5799872/Disabling-SSL-from-MVC-application-in-Visual-Studio-2019) 
