@@ -116,3 +116,9 @@ Reportes
 	
 	Fuente: https://stackoverflow.com/questions/71279204/it-is-not-possible-to-launch-a-c-sharp-web-application-using-the-https-protocol
 	
+*	**Error build\Microsoft.TypeScript.targets.. MSB6006.. NodeJS\node.exe salio con el código 216**  
+	Para solucionar este error modificar el archivo `Microsoft.TypeScript.targets` que se encuentra en `C:\Program Files (x86)\Microsoft SDKs\TypeScript\4.3\build` (o en alguna solución similar) y buscar el nodo `<TypeScriptCompileBlocked>` y dejarlo así:
+	```code:xml
+	<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+	```
+	(Se debe abrir el archivo en modo administrador para poder modificarlo) luego cerrar Visual Studio, limpiar la solución recompilar y ejecutar.
