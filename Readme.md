@@ -91,7 +91,7 @@ Reportes
 ## Demostración
 
 <!-- https://user-images.githubusercontent.com/88981972/233879807-b1d2f422-6fdb-4d00-b366-6c6c44391dc6.mp4 -->
- 
+
 ## Referencias útiles
 
 * **Error: No se puede encontrar una parte de la ruta de acceso ...\bin\roslyn\csc.exe**  
@@ -107,3 +107,12 @@ Reportes
 
 * **Convención de nombres**  
     https://dvoituron.com/naming-conventions/rules/
+
+*	**Error: ERR_SSL_VERSION_OR_CIPHER_MISMATCH en el navegador al ejecutar aplicacion en Windows 7**  
+	Este error se produce porque Windows 7 no tiene deshabilitado por defecto TLS 1.2 en el registro. Por ende tiene dos opciones para poder ejecutar la aplicación.
+	
+	1. Habilitar TLS 1.2 en el registro de Windows 7 como se indica [aquí](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings?tabs=diffie-hellman#tls-12).
+	2. Deshabilitar SSL del proyecto como se indica [aquí](http://dotnet-concept.com/Tips/2019/12/5799872/Disabling-SSL-from-MVC-application-in-Visual-Studio-2019) 
+	
+	Fuente: https://stackoverflow.com/questions/71279204/it-is-not-possible-to-launch-a-c-sharp-web-application-using-the-https-protocol
+	
