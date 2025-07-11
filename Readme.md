@@ -1,7 +1,7 @@
-# Crud MVC ASP.NET
+# Crud MVC ASP\.NET Framework
 
- Sistema básico con operaciones CRUD hecho en MVC ASP.Net 4.5 y Entity Framework listo 
- para ejecutarse.
+Sistema básico tipo CRUD hecho en MVC ASP.NET Framework 4.5 con base
+de datos LocalDB
 
 ## ¿De qué trata esta aplicación?
 
@@ -9,48 +9,66 @@ Este proyecto consiste en un pequeño sistema de inventario con una base de dato
 lista para usar y lógica de negocio mínima. 
 Todos los componentes usados en mayor o menor medida se listan a continuación
 
-  - [Entity Framework 6.0](https://www.nuget.org/packages/EntityFramework/6.0.0) (back-end)
-  - [datatables 1.13.3](https://datatables.net/) (front-end)
+  Backend
+  - [Entity Framework 6.0](https://www.nuget.org/packages/EntityFramework/6.0.0)
 
-## ¿Cómo pruebo esto? (Despliegue)
+  Frontend
+  - [Bootstrap 4.3.1](#https://getbootstrap.com/)
+  - [Bootswatch 4.6.2](#https://bootswatch.com/) (tema nocturno)
+  - [DataTables 1.13.3](https://datatables.net/)
+  - [JQuery 3.5.1](#https://jquery.com/)
+  - [ChartJS](#https://www.chartjs.org/) (gráficos)
 
-Para poder ejecutar la aplicación se necesita tener previamente instalado los siquientes 
-programas
+## ¿Cómo pruebo esto? - despliegue con IIS en Windows (guía rápida)
+
+Para poder ejecutar la aplicación en un sistema Windows usando 
+Internet Information Services (IIS) se necesita tener instalado 
+los siguientes componentes.
 
   - [SQL Server Express LocalDB](https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-express-localdb?view=sql-server-ver16)
-  - Internet Information Services 10 (IIS)
+  - Internet Information Services 10 (desactivado por defecto en Windows)
   - [.Net Framewort 4.5 runtime](https://www.microsoft.com/es-ar/download/details.aspx?id=30653)
 
-Una vez instalados, seguir los siguientes pasos para iniciar el proyecto.
+Una vez hecho esto seguir los siguientes pasos:
 
-  1. Crear un directorio con los archivos de la aplicación en `C:\inetpub\wwwroot\mi-sitio`.
+1. Crear un directorio en la ruta `C:\inetpub\wwwroot\`, por ej. 
+`C:\inetpub\wwwroot\misitio`.
 
-  2. Abrir Internet Information Services (IIS), "Conexiones" > "Agregar sitio web..."
-  
-  3. Completar los campos "Nombre del sitio" y "Grupo de aplicaciones" (se completan automáticamente a la vez)
-  luego en "Ruta de acceso física" indicar la ruta de los archivos del sitio. Sería en
-  este caso `C:\inetpub\wwwroot\mi-sitio` y elegir un puerto que no este asignado. Darle 
-  despues a "Aceptar".
-  
-  5. Antes de iniciar el proyecto cambiar la conexión para que "apunte" a la base de datos
-  que esta dentro de la carpeta `App_Data`. Para esto, modificar el archivo `Web.config`
-  y cambiar la cadena de conexión así.
-      ```xml
-      <connectionStrings>
-        <!--develop-->
-        <!-- <add name="DefaultConnection" connectionString="Server=(LocalDB)\MSSQLLocalDB; Database=crud_mvc_aspnet; Trusted_Connection=True;" providerName="System.Data.SqlClient" /> -->
-        <!--deploy in any machine-->
-        <add name="DefaultConnection" connectionString="Data Source=(LocalDB)\MSSQLLocalDB; AttachDbFilename=|DataDirectory|\crud_mvc_aspnet.mdf; Trusted_Connection=True;" providerName="System.Data.SqlClient"/>
-      </connectionStrings>
+2. En IIS ir a → **Conexiones** → **Sitios** → **Agregar sitio web...** → 
+y ahí completamos los siguientes campos:
+    - **Nombre de sitio**: cualquier valor
+    - **Grupo de aplicaciones**: cualquier valor
+    - **Ruta de acceso física**: aquí copiamos la ruta creada en el paso 1 
+sería esta `C:\inetpub\wwwroot\misitio`
+    - **Puerto**: elegimos un puerto que no este en uso.
 
-      ```
-      Asegurarse de que el apartado `connectionStrings` quede como se muestra arriba.
+3. Desplegamos la aplicación mediante FTP desde Visual Studio IDE
+en la carpeta `C:\inetpub\wwwroot\misitio`.
 
-  4. Luego, en IIS seleccionar el sitio y en "Acciones" > "Examinar \*:8x (http)" para abrir el sitio.
-  
-      **NOTA: Sí sale algún error al querer ejecutar la aplicación, revisar este documento 
-      general para desplegar aplicaciones (paso a paso) que usan LocalDB en IIS 
-      desde [este enlace](Resources/Deploy/Readme.md).**
+4. En la carpeta `C:\inetpub\wwwroot\misitio` bsucamos el archivo `Web.config` y 
+lo editamos para que apunte a la base de datos (archivo .mdf) que se encuentra 
+en la carpeta `App_Data`. Dejamos la sección `connectionStrings` en el 
+`Web.config` como se ve a continuación:
+
+    ```xml
+    <connectionStrings>
+      <!--develop-->
+      <!-- <add name="DefaultConnection" connectionString="Server=(LocalDB)\MSSQLLocalDB; Database=crud_mvc_aspnet; Trusted_Connection=True;" providerName="System.Data.SqlClient" /> -->
+      <!--deploy in any machine-->
+      <add name="DefaultConnection" connectionString="Data Source=(LocalDB)\MSSQLLocalDB; AttachDbFilename=|DataDirectory|\crud_mvc_aspnet.mdf; Trusted_Connection=True;" providerName="System.Data.SqlClient"/>
+    </connectionStrings>
+    ```
+
+5. En IIS ir a → **Acciones** → **Sitios** (elegimos el que creamos) 
+→ **Examinar \*:<puerto> (http)** y le damos click, se nos abrira el sitio con 
+  la aplicación ya desplegada.
+
+**NOTA: Para ver un paso a paso más detallado acerca de como desplegar una aplicación
+usando IIS ver [este enlace](https://github.com/manuel-chinchi/notes-dev)**
+
+## Plataformas soportadas
+
+Windows 7 en adelante
 
 ## Arquitectura de la aplicación
 
@@ -74,7 +92,7 @@ Reportes
   <img src="Resources/Images/report-page.png">
 </p>
 
-Modo nocturno
+**Modo nocturno**
 
 Lista de artículos
 
@@ -82,43 +100,17 @@ Lista de artículos
   <img src="Resources/Images/article-list-page-dark.png">
 </p>
 
-Reportes
+Gráficos
 
 <p align="center">
   <img src="Resources/Images/report-page-dark.png">
 </p>
 
-## Demostración
+<!--## Demostración-->
 
 <!-- https://user-images.githubusercontent.com/88981972/233879807-b1d2f422-6fdb-4d00-b366-6c6c44391dc6.mp4 -->
 
-## Referencias útiles
 
-* **Error: No se puede encontrar una parte de la ruta de acceso ...\bin\roslyn\csc.exe**  
-    Si al querer ejecutar la solución luego de haber descargado el aplicativo con `git clone` da el mensaje de error indicado
-    probar lo siguiente:
-    1. Ejecutar el comando `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform` desde la consola de administración de paquetes Nugget.
-    2. Cerrar la isntancia de Visual Studio IDE, borrar la carpeta `.vs` que se genera en el directorio de la solución, ir al administrador de
-       tareas (Ctrl + Alt + Supr > Administrador de tareas) y cerrar los siguientes procesos
-       - SmSvcHost.exe
-       - VBCSCompiler.exe
-       
-       Luego, volver a abrir la solución con Visual Studio IDE
+## Referencias
 
-* **Convención de nombres**  
-    https://dvoituron.com/naming-conventions/rules/
-
-*	**Error: ERR_SSL_VERSION_OR_CIPHER_MISMATCH en el navegador al ejecutar aplicacion en Windows 7**  
-	Este error se produce porque Windows 7 tiene deshabilitado por defecto TLS 1.2 en el registro. Por ende tiene dos opciones para poder ejecutar la aplicación.
-	
-	1. Habilitar TLS 1.2 en el registro de Windows 7 como se indica [aquí](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings?tabs=diffie-hellman#tls-12).
-	2. Deshabilitar SSL del proyecto como se indica [aquí](http://dotnet-concept.com/Tips/2019/12/5799872/Disabling-SSL-from-MVC-application-in-Visual-Studio-2019) 
-	
-	Fuente: https://stackoverflow.com/questions/71279204/it-is-not-possible-to-launch-a-c-sharp-web-application-using-the-https-protocol
-	
-*	**Error build\Microsoft.TypeScript.targets.. MSB6006.. NodeJS\node.exe salio con el código 216**  
-	Para solucionar este error modificar el archivo `Microsoft.TypeScript.targets` que se encuentra en `C:\Program Files (x86)\Microsoft SDKs\TypeScript\4.3\build` (o en alguna solución similar) y buscar el nodo `<TypeScriptCompileBlocked>` y dejarlo así:
-	```code:xml
-	<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
-	```
-	(Se debe abrir el archivo en modo administrador para poder modificarlo) luego cerrar Visual Studio, limpiar la solución recompilar y ejecutar.
+https://dvoituron.com/naming-conventions/rules/
